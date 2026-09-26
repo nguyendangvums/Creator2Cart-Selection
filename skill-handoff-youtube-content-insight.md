@@ -134,10 +134,22 @@ Google fetches image URLs server side, so:
   - Ẩm Thực Mẹ Làm (2024)
 - **Still open in the VN deck:** PHD remains on slide 25 (stat "9.91M") and on slide 29 (idea card "Survival test"). Vu stopped the fix, so ask before changing.
 
-## 7. Conflicts with the current `youtube-content-insight` SKILL.md (ask Vu to decide)
+## 7. Decisions on the conflicts (Vu, 26 Sep 2026)
 
-- **Internal data.** The skill says "public data only, no internal-data placeholders, no video_content IDs, no Activate section". In this session Vu approved:
-  - An Audiences table with "[VN internal data]" placeholders.
-  - An Activate slide with VeloTrend IDs marked "to be confirmed".
-- **Creators layout.** The skill specifies banner cards with Subscribe pills in 4 or 5 columns. This session switched to the simpler 4x2 avatar cards.
-- **Content ideas.** The skill puts "5 content angles" inside the Dominate slide. This session used separate idea slides with 4 angles plus celebrity-show integration.
+1. **Content angles: keep this session's flow.**
+   - Use a separate "content ideas" slide after each Creators slide: 4 angles, each tied to a named creator.
+   - Include a "Celebrity show integration" angle where a creator runs a show format.
+   - Add the "How the brand shows up" band.
+   - Remove the "5 content angles" panel from the Dominate slide.
+2. **Internal data: keep it, consolidated into ONE placeholder slide.**
+   - All data that needs YouTube internal access goes into a single holder slide. This covers:
+     - Watch time YoY and CTV share
+     - Gender and age skew
+     - In-market segments
+     - VeloTrend video_content IDs
+   - The slide is a table per pillar with "[internal data]" placeholders marked in red.
+   - Pillar slides stay public-data only.
+   - Update the "public data only" hard rule accordingly.
+3. **Creators layout: keep the skill's version,** i.e. cards with a banner strip, avatar with a white ring and a Subscribe pill.
+   - Still show 8 to 10 creators per pillar, with circle-cropped avatars.
+   - Do not use this session's simpler 4x2 grid in the skill.
