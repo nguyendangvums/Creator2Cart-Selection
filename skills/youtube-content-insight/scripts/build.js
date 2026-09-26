@@ -108,6 +108,26 @@ tileSlide(C.screens, [true, false, true, false]);
   s.addNotes(C.contents.notes);
 })();
 
+// ---------------------------------------------------------------- AUDIENCES (the only internal-data slide)
+(function audiences() {
+  const d = C.audiences || {}, s = newSlide();
+  const PH = '[internal data]';
+  tag(s, 'AUDIENCES');
+  title(s, d.title || 'Who watches each passion point on YouTube');
+  sub(s, d.sub || 'Red cells are filled from YouTube internal data before this deck is shared');
+  const line = { pt: 0.75, color: 'E0E0E0' }, none = { type: 'none' };
+  const cell = (text, o) => ({ text, options: Object.assign({ border: [none, none, line, none], valign: 'middle', margin: [0.04, 0.1, 0.04, 0.1] }, o) });
+  const head = ['Passion point', 'Watch time YoY, incl. CTV share', 'Gender and age skew', 'In-market segments', 'VeloTrend video_content IDs'];
+  const rows = [head.map(h => cell(h, { bold: true, color: INK, fontSize: 12 }))];
+  C.pillars.forEach(p => rows.push([cell(`${p.num}  ${p.name}`, { bold: true, color: INK, fontFace: H, fontSize: 13 })]
+    .concat([0, 1, 2, 3].map(() => cell(PH, { color: RED, fontSize: 12 })))));
+  const rh = Math.min(0.62, 4.3 / rows.length);
+  s.addTable(rows, { x: M, y: 2.3, w: W - 2 * M, colW: [3.0, 2.33, 2.33, 2.33, 2.24], rowH: rows.map(() => rh), fontFace: B, fontSize: 12, color: INK });
+  footer(s, 'Source: YouTube internal data (to be pulled)');
+  s.addNotes('Holder slide: the only slide with YouTube internal data. Fill every red cell before the deck is shared, then set the text to ink.\n'
+    + C.pillars.map(p => `${p.num} ${p.name}: in-market hypotheses to validate: ${p.inMarket || 'to define'}. VeloTrend lineups: ${p.lineups.map(l => l.t).join('; ')}.`).join('\n'));
+})();
+
 // ---------------------------------------------------------------- PILLAR SLIDES
 function divider(p) {
   const s = newSlide();
@@ -263,7 +283,7 @@ function creators(p) {
   tag(s, p.tag);
   title(s, d.title);
   sub(s, d.sub, 1.62);
-  const list = d.list, n = list.length;
+  const list = d.list, n = list.length + (list.length === 7 ? 1 : 0);
   const cols = n <= 8 ? 4 : 5;
   const g = 0.2, cw = (W - 2 * M - g * (cols - 1)) / cols, ch = 2.15, rg = 0.18;
   const y0 = 2.15;
@@ -281,52 +301,77 @@ function creators(p) {
     s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: px, y: y + 1.8, w: pw, h: 0.26, fill: { color: INK }, rectRadius: 0.13, line: { color: INK } });
     T(s, 'Subscribe', { x: px, y: y + 1.8, w: pw, h: 0.26, fontSize: 9, bold: true, color: 'FFFFFF', align: 'center', valign: 'middle' });
   });
+  if (list.length === 7) {
+    // only 7 creators passed the brand-safety screen: the 8th card offers more on request
+    const x = M + 3 * (cw + g), y = y0 + ch + rg;
+    card(s, x, y, cw, ch, PALE);
+    T(s, 'More creators on request', { x: x + 0.2, y, w: cw - 0.4, h: ch, fontFace: H, fontSize: 14, bold: true, color: RED, align: 'center', valign: 'middle' });
+  }
   T(s, 'The creators featured are for illustrative purposes only, other creators also available upon request.', { x: M, y: 6.68, w: 10, h: 0.28, fontSize: 9.5, italic: true, color: LIGHT });
   footer(s, d.source);
   const lines = list.map(c => `${c.n}: ${c.s}${c.views ? '' : ' subscribers'} (${c.x}). youtube.com/channel/${c.url}`).join('\n');
-  s.addNotes(`Avatars are monogram placeholders: right-click each circle and use Replace image / Change Picture with the real channel avatar.\nChannels (Social Blade, checked Sep 2026):\n${lines}\nBrand-safety screen: local press searched for each channel; creators with controversies, political content, kids-directed channels and anonymous channels were excluded.`);
+  s.addNotes(`Avatars are monogram placeholders: after import, swap each for the real circle-cropped channel avatar (edit mode, avatar pipeline).\nChannels (Social Blade, checked Sep 2026):\n${lines}\nBrand-safety screen: local press searched for each channel; creators with controversies, fines or backlash, prank or extreme-stunt content, gambling promotion, political content, kids-directed channels and anonymous channels were excluded.`);
+}
+
+function ideas(p) {
+  const d = p.ideas, s = newSlide();
+  tag(s, p.tag);
+  title(s, d.title);
+  const n = 4, g = 0.2, cw = (W - 2 * M - g * 3) / n, cy = 1.95, ch = 2.45;
+  d.cards.forEach((c, i) => {
+    const x = M + i * (cw + g), pale = i === 0;
+    card(s, x, cy, cw, ch, pale ? PALE : GREY);
+    iconSq(s, c.icon, x + 0.28, cy + 0.3, 0.55, pale ? RED : 'FFFFFF', pale ? 'white' : 'red');
+    T(s, c.t, { x: x + 0.28, y: cy + 0.98, w: cw - 0.5, h: 0.55, fontFace: H, fontSize: 14.5, bold: true, valign: 'top' });
+    T(s, [{ text: c.c + ': ', options: { bold: true, color: INK } }, { text: c.d, options: { color: MUTED } }],
+      { x: x + 0.28, y: cy + 1.55, w: cw - 0.5, h: 0.8, fontSize: 11.5, italic: true, lineSpacingMultiple: 1.05 });
+  });
+  const jy = 4.62, jh = 2.05;
+  card(s, M, jy, W - 2 * M, jh, INK);
+  T(s, 'HOW THE BRAND SHOWS UP', { x: M + 0.4, y: jy + 0.3, w: 5, h: 0.3, fontSize: 10.5, bold: true, color: RED, charSpacing: 1 });
+  const jw = (W - 2 * M - 0.8 - 0.6) / 3;
+  const jIcons = d.bandIcons || ['PiMegaphoneBold', 'PiVideoCameraBold', 'PiLightningBold'];
+  d.band.forEach((j, i) => {
+    const x = M + 0.4 + i * (jw + 0.3);
+    s.addImage({ path: I(jIcons[i], 'red'), x, y: jy + 0.85, w: 0.34, h: 0.34 });
+    T(s, j.t, { x: x + 0.48, y: jy + 0.8, w: jw - 0.5, h: 0.44, fontFace: H, fontSize: 14, bold: true, color: 'FFFFFF', valign: 'middle' });
+    T(s, j.d, { x: x + 0.48, y: jy + 1.28, w: jw - 0.55, h: 0.62, fontSize: 11.5, color: 'C9C9C9' });
+  });
+  footer(s, 'Sample content angles for illustration only. Final concepts are co-created with each creator and subject to their approval.');
+  s.addNotes(`Content ideas:\n${d.cards.map((c, i) => `${i + 1}. ${c.t}: ${c.c}, ${c.d}.`).join('\n')}\nHow the brand shows up: ${d.band.map(b => b.t + ' (' + b.d + ')').join('; ')}.\n${p.ideasNotes || ''}\nIntegration guardrails: brand time capped, no forced insertions, mentions in the host's own voice.`);
 }
 
 function dominate(p) {
   const s = newSlide();
   tag(s, p.tag);
   title(s, `Dominate the key opinion leaders for ${p.what}, while owning the trending moments`, { h: 1.1, fontSize: 26, valign: 'top' });
-  // left: 5 content angles
-  const lx = M, ly = 2.15, lw = 7.55, lh = 4.45;
-  card(s, lx, ly, lw, lh, GREY);
-  T(s, '5 CONTENT ANGLES TO MAKE WITH THESE CREATORS', { x: lx + 0.3, y: ly + 0.2, w: lw - 0.6, h: 0.3, fontSize: 10.5, bold: true, color: RED, charSpacing: 1 });
-  const rowH = (lh - 0.65) / 5;
-  p.angles.forEach((a, i) => {
-    const y = ly + 0.6 + i * rowH;
-    s.addShape(pres.shapes.OVAL, { x: lx + 0.3, y: y + 0.08, w: 0.42, h: 0.42, fill: { color: i === 0 ? RED : INK }, line: { color: i === 0 ? RED : INK } });
-    T(s, String(i + 1), { x: lx + 0.3, y: y + 0.08, w: 0.42, h: 0.42, fontFace: H, fontSize: 14, bold: true, color: 'FFFFFF', align: 'center', valign: 'middle' });
-    T(s, [{ text: a.t, options: { bold: true, color: INK, fontFace: H } }, { text: '  ' + a.d, options: { color: '444444' } }],
-      { x: lx + 0.9, y: y + 0.02, w: lw - 1.15, h: 0.36, fontSize: 12, valign: 'middle' });
-    T(s, [{ text: 'With: ', options: { color: MUTED } }, { text: a.with, options: { bold: true, color: RED } }],
-      { x: lx + 0.9, y: y + 0.36, w: lw - 1.15, h: 0.26, fontSize: 10.5, valign: 'middle' });
-    if (i < 4) s.addShape(pres.shapes.LINE, { x: lx + 0.9, y: y + rowH - 0.04, w: lw - 1.2, h: 0, line: { color: 'E0E0E0', width: 0.75 } });
-  });
-  // right: roadblock + velotrend
-  const rx = lx + lw + 0.25, rw = W - M - rx;
-  card(s, rx, ly, rw, 2.15, PALE);
-  tag(s, 'ROADBLOCK', rx + 0.25, ly + 0.2);
-  T(s, '100% share of voice across these creators', { x: rx + 0.25, y: ly + 0.6, w: rw - 0.5, h: 0.5, fontFace: H, fontSize: 13.5, bold: true });
-  s.addImage({ path: A('roadblock.png'), x: rx + (rw - 3.1) / 2, y: ly + 1.12, w: 3.1, h: 0.99 });
-  const vy = ly + 2.3, vh = lh - 2.3;
-  card(s, rx, vy, rw, vh, GREY);
-  tag(s, 'VELOTREND / LINEUP', rx + 0.25, vy + 0.2, INK);
-  iconSq(s, 'PiTrendUpBold', rx + rw - 0.7, vy + 0.15, 0.45, RED, 'white');
-  const n = p.lineups.length, lrh = (vh - 0.75 - 0.1 * (n - 1)) / n;
+  // two side-by-side cards; the content angles live on the ideas slide
+  const y0 = 2.15, h0 = 4.45, g = 0.3, cw = (W - 2 * M - g) / 2;
+  const rx = M;
+  card(s, rx, y0, cw, h0, PALE);
+  tag(s, 'ROADBLOCK', rx + 0.35, y0 + 0.35);
+  T(s, '100% share of voice across these creators', { x: rx + 0.35, y: y0 + 0.88, w: cw - 0.7, h: 0.85, fontFace: H, fontSize: 20, bold: true, valign: 'top' });
+  T(s, 'Your ad on every video of the segment\'s leading creators, when it matters most. Creators on the previous slides are available; others on request.',
+    { x: rx + 0.35, y: y0 + 1.8, w: cw - 0.7, h: 0.8, fontSize: 12.5, color: '444444', lineSpacingMultiple: 1.08 });
+  const iw = 4.2, ih = iw * 0.99 / 3.1;
+  s.addImage({ path: A('roadblock.png'), x: rx + (cw - iw) / 2, y: y0 + h0 - ih - 0.4, w: iw, h: ih });
+  const vx = M + cw + g;
+  card(s, vx, y0, cw, h0, GREY);
+  tag(s, 'VELOTREND / LINEUP', vx + 0.35, y0 + 0.35, INK);
+  iconSq(s, 'PiTrendUpBold', vx + cw - 0.9, y0 + 0.3, 0.5, RED, 'white');
+  T(s, 'Ride the videos trending in the segment right now', { x: vx + 0.35, y: y0 + 0.9, w: cw - 1.4, h: 0.5, fontFace: H, fontSize: 16, bold: true, valign: 'middle' });
+  const n = p.lineups.length, top = y0 + 1.6, avail = h0 - 1.6 - 0.35, lg = 0.15;
+  const lrh = Math.min(0.9, (avail - lg * (n - 1)) / n);
   p.lineups.forEach((l, i) => {
-    const y = vy + 0.68 + i * (lrh + 0.1);
-    s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: rx + 0.25, y, w: rw - 0.5, h: lrh, fill: { color: 'FFFFFF' }, rectRadius: 0.08, line: { color: 'E3E3E3', width: 1 } });
-    s.addImage({ path: I('PiFireBold', 'red'), x: rx + 0.38, y: y + (lrh - 0.28) / 2, w: 0.28, h: 0.28 });
-    T(s, l.t, { x: rx + 0.78, y: y + 0.07, w: rw - 1.15, h: 0.27, fontSize: 10, bold: true, valign: 'middle' });
-    T(s, l.d, { x: rx + 0.78, y: y + 0.34, w: rw - 1.15, h: lrh - 0.38, fontSize: 9, color: MUTED, valign: 'top' });
+    const y = top + i * (lrh + lg);
+    s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: vx + 0.35, y, w: cw - 0.7, h: lrh, fill: { color: 'FFFFFF' }, rectRadius: 0.08, line: { color: 'E3E3E3', width: 1 } });
+    s.addImage({ path: I('PiFireBold', 'red'), x: vx + 0.52, y: y + (lrh - 0.32) / 2, w: 0.32, h: 0.32 });
+    T(s, l.t, { x: vx + 1.0, y: y + 0.1, w: cw - 1.5, h: 0.32, fontSize: 11.5, bold: true, valign: 'middle' });
+    T(s, l.d, { x: vx + 1.0, y: y + 0.42, w: cw - 1.5, h: lrh - 0.48, fontSize: 10.5, color: MUTED, valign: 'top' });
   });
   T(s, '* Creators featured are for illustrative purposes only. Please contact your Account Manager for estimated impressions and investment (DVIP applies).', { x: M, y: 6.68, w: 12, h: 0.28, fontSize: 9, color: LIGHT });
   footer(s, null);
-  s.addNotes(`Content angles:\n${p.angles.map((a, i) => `${i + 1}. ${a.t}: ${a.d}. Creators: ${a.with}.`).join('\n')}\nIntegration guardrails: brand time capped, no forced insertions, mentions in the host's own voice.\nRoadblock: 100% share of voice on the ${p.what} creators shown on the previous slide, around key moments. VeloTrend / Lineup: ${p.lineups.map(l => l.t + ' (' + l.d + ')').join('; ')}. Lineup IDs to be confirmed by your Account Manager.`);
+  s.addNotes(`Roadblock: 100% share of voice on the ${p.what} creators shown on the creators slide, around key moments. VeloTrend / Lineup: ${p.lineups.map(l => l.t + ' (' + l.d + ')').join('; ')}. Lineup IDs sit on the Audiences slide as internal data and are confirmed by your Account Manager.`);
 }
 
 C.pillars.forEach(p => {
@@ -336,6 +381,7 @@ C.pillars.forEach(p => {
   working(p);
   fit(p);
   creators(p);
+  ideas(p);
   dominate(p);
 });
 
@@ -347,7 +393,7 @@ C.pillars.forEach(p => {
   const items = C.sources.map((t, i) => ({ text: t, options: { bullet: { indent: 14 }, breakLine: i < C.sources.length - 1, paraSpaceAfter: 10 } }));
   T(s, items, { x: M, y: 1.6, w: W - 2 * M, h: 5.2, fontSize: 13, color: '333333', valign: 'top' });
   footer(s, null);
-  s.addNotes('Full source list. All figures are public; no YouTube internal data is used. Subscriber counts from Social Blade, checked September 2026, change daily.');
+  s.addNotes('Full source list. Pillar slides use public figures only; the Audiences slide holds the placeholders for YouTube internal data. Subscriber counts from Social Blade, checked September 2026, change daily.');
 })();
 
 // write icon list for asset generation + avatars list

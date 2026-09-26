@@ -114,13 +114,21 @@ module.exports = {
           { n: 'GDH', s: '1.73M', x: 'Films', i: 'GDH', url: 'UC_rENyV7n1gtp6pPKpvuXGg' },
         ],
       },
-      angles: [
-        { t: 'Behind the lakorn', d: 'A backstage mini-series from set, sponsor-branded', with: 'one31, Ch3Thailand, Ch7HD' },
-        { t: 'BL couple challenge', d: 'Stars play a brand game between episodes', with: 'GMMTV OFFICIAL, GMM25Thailand' },
-        { t: 'Variety segment takeover', d: 'Your product becomes a game or prize segment', with: 'WorkpointOfficial, ZENSE MORE' },
-        { t: 'Finale watch party', d: 'Live pre-show and recap around big finales', with: 'one31, Thai Ch8' },
-        { t: 'Film-to-series spin-off', d: 'Short episodes that extend a hit film\'s world', with: 'GDH' },
-      ],
+      ideas: {
+        title: 'Put your brand inside the story',
+        cards: [
+          { icon: 'PiFilmSlateBold', t: 'Behind the lakorn', c: 'one31', d: 'a backstage mini-series from the set, with the brand as the cast\'s on-set essential' },
+          { icon: 'PiStarBold', t: 'Celebrity show integration', c: 'WorkpointOfficial', d: 'a branded game, prize or mission segment inside a star-studded variety show' },
+          { icon: 'PiHeartBold', t: 'BL couple challenge', c: 'GMMTV OFFICIAL', d: 'series stars play a brand game between episodes, cut for fans' },
+          { icon: 'PiTelevisionBold', t: 'Finale watch party', c: 'Ch3Thailand', d: 'a live pre-show and recap around a big lakorn finale, hosted by the brand' },
+        ],
+        band: [
+          { t: 'Show segment sponsor', d: 'Title, segment or mission sponsor inside the show' },
+          { t: 'Fandom content series', d: '3 to 5 behind-the-scenes and couple episodes' },
+          { t: 'Clips to Shorts', d: 'The week\'s big scene cut into Shorts and boosted' },
+        ],
+      },
+      inMarket: 'FMCG and household, beauty and skincare, telco and devices, banking and insurance',
       lineups: [
         { t: 'VELOTREND: THAI LAKORN & SERIES', d: 'Trending episodes, clips and highlights' },
         { t: 'VELOTREND: BL & GL FANDOM', d: 'Series scenes, fan meets and couple content' },
@@ -201,13 +209,21 @@ module.exports = {
           { n: 'FHERO Official', s: '1.16M', x: '"Kularb"', i: 'FH', url: 'UCpYqAXb3nK7nyZpFiKhWgiQ' },
         ],
       },
-      angles: [
-        { t: 'Rap x luk thung collab', d: 'A brand-backed feature that crosses two fanbases', with: 'FHERO Official, GRAMMY GOLD OFFICIAL' },
-        { t: 'Isan road trip session', d: 'Artists sing their way home for the festival', with: 'RsiamMusic, GRAMMY GOLD OFFICIAL' },
-        { t: 'Studio story', d: 'How the hit was made, with the product in the room', with: 'Illslick thelegandary, Genierock' },
-        { t: 'Dance challenge drop', d: 'A hook built for Shorts, boosted as partnership ads', with: 'welovekamikaze, LLOUD Official' },
-        { t: 'Festival live stage', d: 'Branded stage cuts from Loy Krathong to Songkran', with: 'GMM GRAMMY OFFICIAL, Grammy Big' },
-      ],
+      ideas: {
+        title: 'Put your brand on the stage',
+        cards: [
+          { icon: 'PiMicrophoneStageBold', t: 'Rap x luk thung collab', c: 'FHERO Official', d: 'a brand-backed feature track that crosses two fanbases' },
+          { icon: 'PiMapPinBold', t: 'Isan road trip session', c: 'RsiamMusic', d: 'artists sing their way home for the festival, with the brand along the route' },
+          { icon: 'PiMusicNotesBold', t: 'Dance challenge drop', c: 'welovekamikaze', d: 'a hook built for Shorts, with fans invited to film their own' },
+          { icon: 'PiTicketBold', t: 'Festival live stage', c: 'GMM GRAMMY OFFICIAL', d: 'branded stage cuts from Loy Krathong to Songkran' },
+        ],
+        band: [
+          { t: 'Artist feature', d: 'A co-created track or live session with the brand' },
+          { t: 'Festival stage', d: 'Stage cuts timed to Loy Krathong and Songkran' },
+          { t: 'Fan Shorts boost', d: 'The best fan covers and dance clips, boosted' },
+        ],
+      },
+      inMarket: 'beverages and snacks, mobile and telco, motorbikes and auto, e-wallets and banking',
       lineups: [
         { t: 'VELOTREND: LUK THUNG & MOR LAM', d: 'Trending country and Isan music videos' },
         { t: 'VELOTREND: THAI RAP & POP', d: 'Trending rap, pop and T-pop releases' },
@@ -287,13 +303,21 @@ module.exports = {
           { n: 'Lao Pai Lhon Pai', s: '382K', x: 'Horror stories', i: 'LP', url: 'UC_Y4cnyRVn8i3I34Gf-7hpQ (เล่าไปหลอนไป)' },
         ],
       },
-      angles: [
-        { t: 'Sponsored call-in night', d: 'A live horror night presented by your brand', with: 'The Ghost Radio, The Shock Radio' },
-        { t: 'Ghost hunt road trip', d: 'Creators drive to haunted places; the car and snacks come too', with: 'Epic Time' },
-        { t: 'Karma tale series', d: 'Moral stories with a message about care and protection', with: 'Ajarn Yod' },
-        { t: 'Halloween longplay', d: 'An hour-long story set presented by your brand', with: 'Lhon Diary, nuenglc, Lao Pai Lhon Pai' },
-        { t: 'Horror film tie-in', d: 'Stories and trailers around a Thai horror release', with: 'ATIME Do Dee, The Ghost Radio' },
-      ],
+      ideas: {
+        title: 'Keep them up for one more story',
+        cards: [
+          { icon: 'PiBroadcastBold', t: 'Sponsored call-in night', c: 'The Ghost Radio', d: 'a live horror night presented by the brand, with listener calls' },
+          { icon: 'PiCarBold', t: 'Ghost hunt road trip', c: 'Epic Time', d: 'a night drive to a haunted place, with the car and snacks along for the ride' },
+          { icon: 'PiBookOpenBold', t: 'Karma tale series', c: 'Ajarn Yod', d: 'moral stories with a message about care and protection' },
+          { icon: 'PiMoonBold', t: 'Halloween longplay', c: 'Lhon Diary', d: 'an hour-long story set for 31 October, presented by the brand' },
+        ],
+        band: [
+          { t: 'Presented-by episode', d: 'The host opens and closes with the brand, in their own voice' },
+          { t: 'Halloween special', d: 'A branded horror night timed to 31 October' },
+          { t: 'Story Shorts', d: 'The scariest moments cut into Shorts and boosted' },
+        ],
+      },
+      inMarket: 'energy drinks and coffee, snacks, telco and internet, insurance',
       lineups: [
         { t: 'VELOTREND: THAI GHOST STORIES', d: 'Trending horror storytelling and call-in shows' },
         { t: 'LINEUP: HALLOWEEN HORROR', d: 'Horror content around 31 October' },
@@ -375,13 +399,21 @@ module.exports = {
           { n: 'Zerosick', s: '397K', x: 'Health', i: 'ZS', url: 'UCboKYrwUEPD-9gRpuzQDiNA' },
         ],
       },
-      angles: [
-        { t: 'Founder stories', d: 'How a Thai brand was built, told over one long talk', with: 'Mission To The Moon, CK Cheong' },
-        { t: 'Tech explained', d: 'Your product\'s tech, made simple and honest', with: '9arm' },
-        { t: 'Money at year-end', d: 'Tax, saving and investing talk before 31 December', with: 'CK Cheong, Mission To The Moon' },
-        { t: 'Health Q&A', d: 'Doctors answer the questions people Google at night', with: 'Zerosick, Koendanai' },
-        { t: 'Celebrity sit-down', d: 'A star guest with a natural product moment', with: 'GoodDayOfficial, Katanyu Tonight, FAROSE' },
-      ],
+      ideas: {
+        title: 'Join the conversation, not the break',
+        cards: [
+          { icon: 'PiStarBold', t: 'Celebrity show integration', c: 'Katanyu Tonight', d: 'a star guest interview with a natural, host-led product moment' },
+          { icon: 'PiRocketLaunchBold', t: 'Founder stories', c: 'Mission To The Moon', d: 'how a Thai brand was built, told over one long talk' },
+          { icon: 'PiCpuBold', t: 'Tech explained', c: '9arm', d: 'the product\'s tech, made simple and honest' },
+          { icon: 'PiPiggyBankBold', t: 'Money at year-end', c: 'CK Cheong', d: 'tax, saving and investing talk before 31 December' },
+        ],
+        band: [
+          { t: 'Guest-star episode', d: 'A celebrity sit-down with the brand in the conversation' },
+          { t: 'Expert series', d: '3 to 5 episodes on money, tech or health' },
+          { t: 'Clips to Shorts', d: 'The best moments cut into Shorts and boosted' },
+        ],
+      },
+      inMarket: 'banking and investment, tech and devices, health and insurance, beauty and personal care',
       lineups: [
         { t: 'VELOTREND: THAI PODCASTS', d: 'Trending podcast and talk episodes' },
         { t: 'VELOTREND: BUSINESS & TECH TALK', d: 'Explainers on money, careers and tech' },
@@ -462,13 +494,21 @@ module.exports = {
           { n: 'Starvingtime', s: '446K', x: 'Food finds', i: 'ST', url: 'UCEPwlU59eA7jJ_wS2jr1RVQ' },
         ],
       },
-      angles: [
-        { t: 'Secondary-city food trail', d: 'One province, ten stalls, one brand along for the ride', with: 'Jack Pap Ho, Go Went Go' },
-        { t: 'Giant challenge', d: 'Your product as the hero ingredient or the finish-line drink', with: 'BANKII, Jamsai JS' },
-        { t: 'Kin Je special', d: 'Vegetarian Festival recipes and stall hunts', with: 'JIMSURIYA V.2, Mom Tanad Daek' },
-        { t: 'Budget backpacking', d: 'Travel-scheme trips that show how to save and spend', with: 'TheGaijinTrips, Go Went Go' },
-        { t: 'Honest taste test', d: 'Blind reviews that settle which one is best', with: 'Mom Tanad Daek, Starvingtime' },
-      ],
+      ideas: {
+        title: 'Make your product part of the trip',
+        cards: [
+          { icon: 'PiMapTrifoldBold', t: 'Secondary-city food trail', c: 'Jack Pap Ho', d: 'one province, ten stalls, with the brand along for the ride' },
+          { icon: 'PiForkKnifeBold', t: 'Honest taste test', c: 'Mom Tanad Daek', d: 'a blind review that settles which one tastes best' },
+          { icon: 'PiLeafBold', t: 'Kin Je special', c: 'JIMSURIYA V.2', d: 'vegetarian festival recipes, cooked with the brand\'s product' },
+          { icon: 'PiAirplaneTiltBold', t: 'Budget trip plan', c: 'Go Went Go', d: 'a travel-scheme weekend that shows how to save and spend' },
+        ],
+        band: [
+          { t: 'Branded route', d: 'A multi-episode trip through one province' },
+          { t: 'Hero ingredient', d: 'The product at the center of the dish' },
+          { t: 'Tag and shop', d: 'Product tags that turn the trip into a cart' },
+        ],
+      },
+      inMarket: 'seasoning and sauces, beverages, auto and travel, cards and e-wallets',
       lineups: [
         { t: 'VELOTREND: THAI FOOD & STREET EATS', d: 'Trending food reviews and challenges' },
         { t: 'VELOTREND: THAI TRAVEL', d: 'Trending domestic trips and travel vlogs' },
@@ -548,13 +588,21 @@ module.exports = {
           { n: 'Garena RoV Thailand', s: '3.9M', x: 'Esports', i: 'ROV', url: 'UCy19QXxbCHh8qVVCbuGk-ig' },
         ],
       },
-      angles: [
-        { t: 'Branded game night', d: 'A live community night with a product-powered challenge', with: 'zbing z., HEARTROCKER' },
-        { t: 'Squad quest', d: 'A mobile battle series where the brand sets the mission', with: 'RUOK, Garena Free Fire TH' },
-        { t: 'Family co-op', d: 'Parents and kids play together; age-appropriate brands', with: 'PojzPlaza, PRIMKUNG' },
-        { t: 'Finals watch-along', d: 'Creators react live to the league finals', with: 'Garena RoV Thailand, LowGrade' },
-        { t: 'Setup makeover', d: 'Gear and connection upgrade, reviewed on stream', with: 'zbing z., LowGrade' },
-      ],
+      ideas: {
+        title: 'Join the game, not just the break',
+        cards: [
+          { icon: 'PiGameControllerBold', t: 'Branded game night', c: 'zbing z.', d: 'a live community night with a product-powered challenge' },
+          { icon: 'PiUsersThreeBold', t: 'Squad quest', c: 'RUOK', d: 'a mobile battle series where the brand sets the mission' },
+          { icon: 'PiTrophyBold', t: 'League finals segment', c: 'Garena RoV Thailand', d: 'a branded moment inside the finals broadcast and highlights' },
+          { icon: 'PiDesktopTowerBold', t: 'Setup makeover', c: 'LowGrade', d: 'a gear and connection upgrade, reviewed on stream' },
+        ],
+        band: [
+          { t: 'Live segment', d: 'A recurring branded moment inside the stream' },
+          { t: 'Community cup', d: 'A creator tournament co-hosted by the brand' },
+          { t: 'Clips to ads', d: 'The best live moments cut and boosted' },
+        ],
+      },
+      inMarket: 'mobile and telco, snacks and drinks, gaming gear, e-wallets and top-ups',
       lineups: [
         { t: 'VELOTREND: THAI GAMING', d: 'Trending Let\'s Plays and gaming creators' },
         { t: 'VELOTREND: RoV & MOBILE ESPORTS', d: 'League matches, highlights and guides' },
