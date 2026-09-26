@@ -33,12 +33,38 @@ Weak or stale numbers to re-check before sending to a client: SOOBIN (Oct 2024),
 
 Still open in the VN deck: PHD remains on slide 25 (stat "9.91M") and slide 29 (idea card "Survival test"). Vu stopped the fix, so ask before changing. The VN deck also still says "#1 in SEA" (ToRung stat) and "Across Southeast Asia" (shopping slide), which break the no-other-regions rule; raise it with Vu before touching.
 
+Audit against the merged skill (26 Sep 2026, 44 slides, nothing changed yet):
+- Structure: 6 pillars x 6 slides (divider, insight, working, fit, creators, ideas), one combined Dominate slide (42), How to get started (43), Sources (44). Missing: a surprising fact slide per pillar and per-pillar Dominate slides.
+- Fonts: 38 titles in YouTube Display ExtraBold at 55 to 73pt in 0.95 in boxes, sizes growing pillar by pillar (62, 64, 68, 73pt). Long titles wrap and overlap the subline or content on slides 2, 7, 8, 19, 25 and 31. Slides 37, 39, 41 and 44 use Plus Jakarta Sans 30pt. One visible Calibri run: the "Chany" bar label on slide 19. Vu set YouTube Display herself; ask before changing it.
+- Creators slides use compact chips (avatar left, name, subs), not the skill card (banner, centred avatar with white ring, Subscribe pill). Avatars are already real photos. Creators notes still say "Avatars are placeholders" and carry no channel IDs.
+- Rule and brand-safety flags: Uyen Ninh card "Vietnam x Germany" (slide 16) and idea "a Tết tradition explained to her German family" (slide 17); Thầy Giáo Ba bar on slide 31 (YouTube channel deleted in 2021, cross-platform data); ToRung's owner is anonymous (Vu's own note); "video_content IDs to be confirmed" footnote on slide 42; "Google Marketing Live SEA" in source lines (slides 37, 39, 44).
+- Moments: slide 8 row "FINALE · SAT 20:30" (Anh Trai Vượt Ngàn Chông Gai 2026) has no date; confirm it has not passed.
+
+Candidate surprising facts, researched 26 Sep 2026 (awaiting Vu's OK):
+- Music & Fandom: "Mất kết nối" (Dương Domic, from Anh Trai Say Hi) was the only Vietnamese song in YouTube's global top 100 music videos, peak #60, and passed 100M views in six months. VnExpress Ngôi Sao (Dec 2024); Kenh14 (28 May 2025).
+- Proud Vietnam: "A80" was Vietnam's #1 "What is...?" search of 2025, ahead of "8386", "sít rịt" and "lowkey". Dân trí (10 Dec 2025); Thanh Niên (25 Dec 2025). Overlaps the A80 stat on slide 13.
+- Shorts Storytelling: option A, ToRung became the first Vietnamese channel to pass 50M subscribers (22 Feb 2025) with dialogue-light comedy skits (Wikipedia; anonymous owner). Option B, FAPTV, a comedy skit group, earned Vietnam's first Diamond Play Button (10M, 17 Sep 2019; VTV, 19 Sep 2019).
+- Challenge & Adventure: Bà Tân Vlog reached 1M subscribers in 20 days, a Vietnam record (Vietkings via Kenh14, 6 Jun 2019). Already in slide 25's "The appeal" box.
+- Live: Gaming & Football: commentator Hoàng Luân's co-stream of the 2025 League of Legends world final peaked at 420,204 concurrent viewers, #2 on YouTube Gaming worldwide for 2025 peaks. Streams Charts (2025 year-end); Znews.
+- Shopping & Reviews: Vietnam is one of 6 countries where creators earn from YouTube Shopping Affiliate (Kenh14, 22 Jan 2026). Alternative: beauty is Vietnam's biggest e-commerce category at 24.4T VND (Google Marketing Live 2026, already in slide 37's notes).
+
 ## Thailand (TH deck `1QZfw2zZnBVMrUBHx54nXNG44nqHuXhPw7vsqdedi1a8`, Sep 2026)
 
 Channel IDs for all 50 creators are in `templates/content.thailand.example.js` (`creators.list[].url`). Native names for Ajarn Yod, Lhon Diary, Lao Pai Lhon Pai, Jack Pap Ho and Mom Tanad Daek sit next to their IDs.
 
-Deck state before the Sep 2026 merge: 47 slides, 5-angle panels on every Dominate slide, no content ideas slides, no Audiences slide, monogram avatars.
+Deck state before the Sep 2026 merge: 47 slides, 5-angle panels on every Dominate slide, no content ideas slides, no Audiences slide, monogram avatars. Fonts (export checked 26 Sep 2026): Plus Jakarta Sans titles, Google Sans body, nothing else renders.
 
 ## Philippines (PH deck `118Nj6SOSNyJg1bPk2LGguqT9U-Uep1RofU7lNHKLnPI`, Sep 2026)
 
 Deck state before the Sep 2026 merge: 41 slides, 6 pillars with 6 slides each (no fact slides), 4 to 5 creators per pillar, Dominate slides already without the angles panel, no content ideas slides, no Audiences slide.
+
+### PH ver 2 (`1PuaSI0WWgUn1cEdMvU87jfXZjh_c5WVBGGVeBVK6qdk`), edited 26 Sep 2026
+
+Vu's ver 2 replaced the deck above. It already had 6 fact slides (37 weeks, 25x, 7 of 10, 2 of 6, 6 in a row, 98%) and 8 or 9 creators per pillar.
+
+Now 54 slides: cover, why, screens, contents, Audiences (slide 5), then per pillar divider, fact, insight, working, fit, creators, content ideas, Dominate (two side-by-side cards), and Sources. Fonts: Plus Jakarta Sans titles, Google Sans body; nothing else renders.
+
+- Avatars: all 49 are real channel avatars, circle-cropped, checked twice. Raw and circle versions plus the 25 icons sit in the scratch deck `1sA1kMqPuj6ZpP_A7ZxvKInSS3LuXjPCLjKbBXqPouu4` (not trashed; Vu decides).
+- Content ideas notes keep the dropped angles from the old 5-angle panels under "More angles to pitch".
+- Moments replaced as near-expiry: Ben&Ben "Saranggola" (2 Oct 2026) and the Filipino Music Awards (6 Oct 2026) on the OPM working slide; MPL Season 18 regular season (to 11 Oct 2026) on the Game On slide. MEGA Magazine and "2026 in Philippine music" left the Sources slide with them.
+- Flags for Vu: Kuan on One streams on the ABS-CBN Entertainment channel, so its card uses the ABS-CBN avatar, and its 15M+ views stat is from season 1 (the show is in season 5 from 9 Jun 2026). MPL Philippines Season 18 Grand Finals reported for 25 Oct 2026, venue TBD. The Shop the Review VeloTrend card lists BEAUTY REVIEWS while every creator on the slide is a tech reviewer.

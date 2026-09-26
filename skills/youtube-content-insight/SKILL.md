@@ -132,12 +132,16 @@ The container cannot reach youtube.com or most sites, but Google fetches image U
 3. Circle-crop it: `replaceImage` / `createImage` with `https://wsrv.nl/?url=<urlencoded contentUrl>&w=400&h=400&fit=cover&mask=circle&output=png`. wsrv cannot fetch unavatar directly; it must go through the Google contentUrl. A contentUrl that is already circle-cropped can be reused as is in `replaceImage`.
 4. Verify visually: lay the raw avatars out in a grid on a scratch slide, export to PDF, check each face or logo against the channel, then delete the scratch slide.
 5. Channel IDs: WebSearch `"<name>" youtube.com/channel`, or vidIQ / Social Blade / NoxInfluencer results.
+6. Unavatar fails intermittently when many images load in one batch ("problem retrieving the image"). Load one or two per call and retry the failures singly.
+7. Card icons follow the same route: `https://wsrv.nl/?url=` + urlencoded `https://api.iconify.design/ph/<name>-bold.svg?color=%23<hex>&height=512` + `&w=256&h=256&output=png` gives a Phosphor Bold icon (the react-icons/pi set) in any color. Create the icons on a scratch slide, check them in a render, then reuse their contentUrl within 30 minutes (contentUrls expire).
 
 ### E4. Verification loop
 - Export with Drive `download_file_content` (`application/pdf`). Render the saved result with `google-workspace/scripts/render_export.py` (use `--pages` for single slides); when pdftoppm is missing, render the decoded PDF with PyMuPDF. Build PIL contact sheets and look at every changed slide.
 - Catch these problems: avatars covering card titles; titles wrapping after Vu's font change; source lines running into the page number; cards touching the subtitle; text overflowing its card.
 - After adding, moving or deleting slides, renumber the static page-number boxes by slide position (E2 recipe).
 - Scan the export's text: no em or en dashes, no other markets, "[internal data]" only on the Audiences slide.
+- Check fonts in the export: `pdffonts` lists the embedded fonts, and PyMuPDF (`page.get_text('rawdict')`) counts the visible glyphs per font. Calibri embedded with zero glyphs is the theme default in empty boxes and harmless. A visible Calibri or Arial run lost its font: set it to the body font. A title above about 40pt in a 0.95 in box wraps to two lines and runs into the subline.
+- Moments to own: replace any dated moment that falls within about three weeks of delivery, keep the rows in date order, and update the slide's source line and notes to match.
 
 ### E5. Recipes for the Step 3 structure
 - Content ideas slide: duplicate the pillar's "Where your brand fits" slide and move the copy right after the Creators slide. Swap in the title, the 4 card titles (angles), the italic descriptions ("<Creator>: <angle>"), card icons if needed, the band label "HOW THE BRAND SHOWS UP", the 3 band items, and the footer line.
