@@ -74,6 +74,23 @@ Channel IDs for all 50 creators are in `templates/content.thailand.example.js` (
 
 Deck state before the Sep 2026 merge: 47 slides, 5-angle panels on every Dominate slide, no content ideas slides, no Audiences slide, monogram avatars. Fonts (export checked 26 Sep 2026): Plus Jakarta Sans titles, Google Sans body, nothing else renders.
 
+### TH edits, 27 Sep 2026
+
+Vu's calls: keep BANKII, Jamsai JS, PojzPlaza and PRIMKUNG; no sign-off needed between phases.
+
+Now 54 slides: cover, why, screens, contents, Audiences (slide 5), then per pillar divider, fact, insight, working, fit, creators, content ideas, Dominate, and Sources (54). Fonts unchanged: Plus Jakarta Sans titles, Google Sans body; Calibri is embedded but draws no glyphs.
+
+- Content ideas (slides 12, 20, 28, 36, 44, 52): 4 idea cards each, one creator per card; notes carry "Also fits", the band, and the angles dropped from the old panels under "More angles to pitch" (film spin-off, studio story, horror film tie-in, health Q&A, Kin Je special, family co-op).
+- Dominate (slides 13, 21, 29, 37, 45, 53): angles panels removed; Roadblock and VeloTrend / Lineup side by side, two lineups each.
+- Avatars: all 51 are real channel avatars, circle-cropped and checked. Raw and circle versions sit on the scratch deck (slides th_p10 to th_p45); the check render is in "Scratch - TH avatar check (Claude)" (`1c8zCVL_wbBNYr1BcmjJxBNMaTS_q1AzX45N43h6eyB0`). Neither is trashed; Vu decides.
+- Moments replaced as near-expiry: the Vegetarian Festival (10 to 18 Oct) on the Eat & Travel working slide (41), and the RoV Pro League Winter finals (to 1 Oct) on the Game On working slide (49). Kapook left the Sources slide; the "gamescom" co-branding mention left slide 48's notes.
+
+Flags for Vu:
+- Slide 9: "LATE NOV 2026" for GMMTV's 2027 lineup reveal is based on the 2025 event (25 Nov 2025); the 2027 date is not announced.
+- GMM GRAMMY OFFICIAL's avatar now reads "GMM MUSIC": confirm the channel's display name before sending.
+- Garena Free Fire TH's avatar is a collab artwork (a licensed anime character) and will likely change.
+- The Audiences slide's red cells still need YouTube internal data.
+
 ## Philippines (PH deck `118Nj6SOSNyJg1bPk2LGguqT9U-Uep1RofU7lNHKLnPI`, Sep 2026)
 
 Deck state before the Sep 2026 merge: 41 slides, 6 pillars with 6 slides each (no fact slides), 4 to 5 creators per pillar, Dominate slides already without the angles panel, no content ideas slides, no Audiences slide.
