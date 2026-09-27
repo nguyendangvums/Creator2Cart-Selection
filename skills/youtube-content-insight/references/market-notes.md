@@ -31,7 +31,7 @@ Kept after review: Bà Tân Vlog (Vu's call).
 
 Weak or stale numbers to re-check before sending to a client: SOOBIN (Oct 2024), Phương Mỹ Chi (Sep 2024), Sang Vlog (2023), Mister Vịt and Mèo Simmy (blog sources), Ẩm Thực Mẹ Làm (2024).
 
-Still open in the VN deck: PHD remains on slide 25 (stat "9.91M") and slide 29 (idea card "Survival test"). Vu stopped the fix, so ask before changing. The VN deck also still says "#1 in SEA" (ToRung stat) and "Across Southeast Asia" (shopping slide), which break the no-other-regions rule; raise it with Vu before touching.
+Region mentions stay in the VN deck by Vu's call (27 Sep 2026): "#1 in SEA" and "most-subscribed channel in Southeast Asia" (ToRung, slide 24), "Across Southeast Asia" (slide 48), Google Marketing Live SEA in sources (slides 48, 50, 55), Uyen Ninh "Vietnam x Germany" (slides 19 and 20). Do not remove them in a refresh without asking.
 
 Audit against the merged skill (26 Sep 2026, 44 slides, nothing changed yet):
 - Structure: 6 pillars x 6 slides (divider, insight, working, fit, creators, ideas), one combined Dominate slide (42), How to get started (43), Sources (44). Missing: a surprising fact slide per pillar and per-pillar Dominate slides.
@@ -47,6 +47,26 @@ Candidate surprising facts, researched 26 Sep 2026 (awaiting Vu's OK):
 - Challenge & Adventure: Bà Tân Vlog reached 1M subscribers in 20 days, a Vietnam record (Vietkings via Kenh14, 6 Jun 2019). Already in slide 25's "The appeal" box.
 - Live: Gaming & Football: commentator Hoàng Luân's co-stream of the 2025 League of Legends world final peaked at 420,204 concurrent viewers, #2 on YouTube Gaming worldwide for 2025 peaks. Streams Charts (2025 year-end); Znews.
 - Shopping & Reviews: Vietnam is one of 6 countries where creators earn from YouTube Shopping Affiliate (Kenh14, 22 Jan 2026). Alternative: beauty is Vietnam's biggest e-commerce category at 24.4T VND (Google Marketing Live 2026, already in slide 37's notes).
+
+### VN edits, 26 to 27 Sep 2026
+
+Vu's calls: keep the YouTube Display titles, keep the region mentions, use ToRung for the Shorts fact, replace PHD and Thầy Giáo Ba. The other five facts went in as proposed.
+
+Now 55 slides: cover, why, screens, contents, Audiences (slide 5), then per pillar divider, fact, insight, working, fit, creators, content ideas, Dominate, then How to get started (54) and Sources (55).
+
+- Titles: six overflowing titles shrunk to one line, still YouTube Display. Slides 48, 50, 52 and 55 still use Plus Jakarta Sans 30pt; ask Vu before switching them.
+- Swaps: the Challenge insight slide (32) shows Khoai Lang Thang (3.54M) instead of PHD, and the idea card on slide 36 is "Adventure test". The live streamers chart (slide 40) shows Em Chè ĐTCL (5.24M hours) instead of Thầy Giáo Ba.
+- Facts (slides 7, 15, 23, 31, 39, 47): Top 100 (Mất kết nối), #1 (A80), 50M (ToRung), 20 days (Bà Tân Vlog), 420K (Hoàng Luân), 1 of 6 (YouTube Shopping Affiliate).
+- Creators slides (11, 19, 27, 35, 43, 51): rebuilt as skill cards with pillar banners, white-ringed avatars (the existing real photos), "<subs> subs · <niche>" lines and Subscribe pills. Niches added for Sơn Tùng M-TP (V-pop) and FAPTV (comedy skits). Sublines added on the Shorts, Challenge and Live slides. Notes list each channel with its link where the ID or handle is known; the Challenge notes list the screened-out channels.
+- Dominate (slides 13, 21, 29, 37, 45, 53): one per pillar, Roadblock card plus a VeloTrend / Lineup card with that pillar's lineups. The combined slide and its "video_content IDs to be confirmed" footnote are gone.
+- Banner patterns and test shapes sit on the scratch deck `1sA1kMqPuj6ZpP_A7ZxvKInSS3LuXjPCLjKbBXqPouu4` (slides sc_bn1 to sc_bn6).
+
+Flags for Vu:
+- Slide 9: "FINALE · SAT 20:30" (Anh Trai Vượt Ngàn Chông Gai 2026) has no date.
+- Fact 2 (A80, slide 15) repeats the A80 stat on slide 16.
+- The Bà Tân fact dates from 2019 and the Mất kết nối chart from Dec 2024.
+- ToRung's owner is anonymous (noted in the fact slide's notes).
+- Oops Zeros, Mister Vịt and Mèo Simmy make Minecraft and Roblox videos for a young audience: check their made-for-kids status before booking.
 
 ## Thailand (TH deck `1QZfw2zZnBVMrUBHx54nXNG44nqHuXhPw7vsqdedi1a8`, Sep 2026)
 

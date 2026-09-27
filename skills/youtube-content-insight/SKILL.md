@@ -122,8 +122,11 @@ Load the `google-workspace` skill and read its `references/slides.md` before the
 - `duplicateObject` copies a whole slide; `objectIds` names the copies.
 - `updateSlidesPosition`: `insertionIndex` counts from the order before the move.
 - `createSlide` with `predefinedLayout: BLANK` can fail on custom masters; omit the layout for scratch slides.
-- Table text: style cell text per cell with `cellLocation`.
+- Table text: style cell text per cell with `cellLocation`. `deleteTableRow` bottom-up; swap cell text with the insert-at-0 recipe plus `cellLocation`; `updateTableColumnProperties` and `updateTableRowProperties` (`minRowHeight`) resize.
 - Batches are atomic: one bad image URL fails the whole batch. Test uncertain images one per call on a scratch slide first.
+- `createShape` rejected `FLOWCHART_TERMINATOR` with a bare "invalid argument". A `ROUND_RECTANGLE` corner is about a sixth of its shorter side, so it can never be a full pill: build a pill from two circles, a bar and a text box, grouped.
+- A new text box gets default padding, so left-aligned text sits a little lower and further right than the deck's own boxes. Duplicate an existing box on the same slide (the footnote works), move it and swap its text instead.
+- Repeat a card: build one, group it (nested groups work), `duplicateObject` the group with an `objectIds` entry for every child, move each copy with a RELATIVE transform, `ungroupObjects`, then swap each copy's text with the insert-at-0 recipe. Bring anything that must sit on top (avatars) forward last with `updatePageElementsZOrder`.
 
 ### E3. Avatar pipeline (circle-crop every avatar)
 The container cannot reach youtube.com or most sites, but Google fetches image URLs server side:
@@ -134,6 +137,7 @@ The container cannot reach youtube.com or most sites, but Google fetches image U
 5. Channel IDs: WebSearch `"<name>" youtube.com/channel`, or vidIQ / Social Blade / NoxInfluencer results.
 6. Unavatar fails intermittently when many images load in one batch ("problem retrieving the image"). Load one or two per call and retry the failures singly.
 7. Card icons follow the same route: `https://wsrv.nl/?url=` + urlencoded `https://api.iconify.design/ph/<name>-bold.svg?color=%23<hex>&height=512` + `&w=256&h=256&output=png` gives a Phosphor Bold icon (the react-icons/pi set) in any color. Create the icons on a scratch slide, check them in a render, then reuse their contentUrl within 30 minutes (contentUrls expire).
+8. Banner strips: on a scratch slide with a red background, place one row of 15 pillar icons in #FF476C (white at 28% on red), group it, and duplicate the row twice with an offset. Take a LARGE `read_slide_page_thumbnail` and crop it with `https://wsrv.nl/?url=<urlencoded thumbnail contentUrl>&w=1180&h=180&fit=cover&output=png`. Place the crop inset inside a red `ROUND_RECTANGLE` so its square corners stay hidden.
 
 ### E4. Verification loop
 - Export with Drive `download_file_content` (`application/pdf`). Render the saved result with `google-workspace/scripts/render_export.py` (use `--pages` for single slides); when pdftoppm is missing, render the decoded PDF with PyMuPDF. Build PIL contact sheets and look at every changed slide.
@@ -147,6 +151,8 @@ The container cannot reach youtube.com or most sites, but Google fetches image U
 - Content ideas slide: duplicate the pillar's "Where your brand fits" slide and move the copy right after the Creators slide. Swap in the title, the 4 card titles (angles), the italic descriptions ("<Creator>: <angle>"), card icons if needed, the band label "HOW THE BRAND SHOWS UP", the 3 band items, and the footer line.
 - Dominate slide with a content-angles panel: delete the panel's elements (panel card, label, numbered circles, angle rows, "With:" lines, dividers), then move and resize the Roadblock and VeloTrend cards and their contents into two side-by-side cards that fill the freed area. Keep the title and the DVIP footnote.
 - Creators slide with fewer than 8 cards: duplicate one card's elements (card, banner, white ring, avatar, name, subs line, Subscribe pill), fill in the new creators, and re-grid all cards (8: 4 columns; 9 to 10: 5 columns; 2 rows). Then run E3 on every avatar.
+- Creators slide with compact chips (avatar left, text right): keep each chip's background and avatar, delete its text box, build one skill card (E3 banner, white ring, name, "<subs> subs · <niche>", Subscribe pill) and copy it with the repeat-a-card recipe (E2). Move the footnote below the second row and update the notes: drop "Avatars are placeholders", add the channel links.
+- One combined Dominate slide for all pillars: duplicate it once per pillar and move each copy after that pillar's content ideas slide. Retag, retitle "Dominate the key opinion leaders for <pillar>, while owning the trending moments", keep only that pillar's 2 to 3 lineups in the VeloTrend table (taller rows), drop any "video_content IDs" line, add notes, delete the combined slide and renumber.
 - Audiences slide: create it after Contents (no predefined layout on custom masters), add the tag, title and subline in the deck's fonts, and a real table: bold header without fill, one row per pillar, bold first column, data cells "[internal data]" in FF0033, light row borders only.
 - Stat removal: delete the stat, then search the deck (`read_file_content`) for every line that repeats or depends on it and remove those too.
 
