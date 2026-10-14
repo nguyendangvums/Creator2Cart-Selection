@@ -3,10 +3,10 @@
   "category": "Beauty",
   "market": "Vietnam",
   "brand_fit": null,
-  "selection_note": "Discovery run: the five largest beauty-led Vietnamese YouTube channels by subscribers found across vidIQ, Social Blade, Influesque and YouTube page data on 14 Oct 2026.",
+  "selection_note": "Discovery run: the five largest beauty-led Vietnamese YouTube channels by subscribers; numbers from each channel's YouTube About page, 14 Oct 2026.",
   "title_slide": {
     "header": "Vietnam Beauty Creator Portfolio",
-    "subtitle": "Five beauty-led channels reaching 8.36M subscribers",
+    "subtitle": "Five beauty-led channels reaching 8.37M subscribers",
     "summary": "A curated lineup of Vietnam's largest beauty-led YouTube channels, spanning honest product reviews, skincare routines, lipstick expertise and viral makeup entertainment. Together they give brands one route to Vietnamese beauty shoppers, from long-form reviews to Shorts.",
     "pills": [
       "Beauty",
@@ -15,9 +15,9 @@
       "Reviews"
     ],
     "combined": {
-      "subscribers": "8.36M",
-      "videos": "2,201+",
-      "views": "1.47B+"
+      "subscribers": "8.37M",
+      "videos": "2,391",
+      "views": "2.29B"
     },
     "mosaic": [
       "images/quynhthi-tile.jpg",
@@ -26,11 +26,11 @@
       "images/changmakeup-tile.jpg",
       "images/liemakeup-tile.jpg"
     ],
-    "footnote": "Source: YouTube, Social Blade, vidIQ, Influesque; 14 Oct 2026. Videos and views exclude Quỳnh Thi. Images: YouTube channel images."
+    "footnote": "Source: YouTube channel About pages, 14 Oct 2026. Images: official YouTube channel images."
   },
   "grid_slide": {
     "header": "Choose From A Portfolio Of Top Beauty Creators",
-    "footnote": "Ranked by subscribers. Source: YouTube, Social Blade, vidIQ, Influesque; 14 Oct 2026. Images: official YouTube channel images."
+    "footnote": "Ranked by subscribers. Source: YouTube channel About pages, 14 Oct 2026. Images: official YouTube channel images."
   },
   "divider_slide": {
     "eyebrow": "Vietnam",
@@ -42,15 +42,15 @@
       "Reviews",
       "Tutorials"
     ],
-    "footnote": "Combined totals. Source: YouTube, trackers; 14 Oct 2026."
+    "footnote": "Combined totals. Source: YouTube, 14 Oct 2026."
   },
   "creators": [
     {
       "name": "Quỳnh Thi",
-      "handle": "@QuynhThi",
+      "handle": "@QuỳnhThi",
       "url": "https://www.youtube.com/channel/UCjAeWwzzt28ey79UU2QnlOw",
       "hook": "Lifestyle-first beauty for Vietnam's young women",
-      "bio": "Quỳnh Thi blends makeup looks, skincare tips, self-care vlogs and candid storytelling into one lifestyle-led beauty channel. Viewers follow her personality-first take on beauty trends, and 2.86M subscribers make it the largest beauty-led channel in this lineup. A strong fit for skincare, cosmetics, personal care and youth lifestyle brands that want mass reach with an authentic voice.",
+      "bio": "Quỳnh Thi blends makeup looks, skincare tips, self-care vlogs and candid storytelling into one lifestyle-led beauty channel. Her personality-first take on trends has earned 2.86M subscribers and 781M views from just 121 videos, the largest audience in this lineup. A strong fit for skincare, cosmetics, personal care and youth lifestyle brands that want mass reach.",
       "pills": [
         "Beauty",
         "Lifestyle",
@@ -63,16 +63,17 @@
       ],
       "stats": {
         "subscribers": "2.86M",
-        "videos": null,
-        "views": null
+        "videos": "121",
+        "views": "781M"
       },
       "image": "images/quynhthi-show.jpg",
       "avatar": "images/quynhthi-avatar.jpg",
-      "footnote": "Source: YouTube channel page (subscribers), Oct 2026; videos and views pending live YouTube fetch. Image: YouTube channel image.",
+      "footnote": "Source: YouTube channel About page, 14 Oct 2026. Image: official YouTube channel image (@QuỳnhThi).",
       "sources": {
-        "subscribers": "YouTube channel page structured data (2,860,000), indexed Oct 2026",
-        "videos": "Pending: no tracker publishes it; to be read from the YouTube About page via Agent Reach once youtube.com is allowed",
-        "views": "Pending: no tracker publishes it; to be read from the YouTube About page via Agent Reach once youtube.com is allowed",
+        "subscribers": "2.86M subscribers (YouTube channel About page (More info), rendered via WordPress mShots and fetched by Google Slides, 14 Oct 2026)",
+        "videos": "121 videos (YouTube channel About page (More info), rendered via WordPress mShots and fetched by Google Slides, 14 Oct 2026)",
+        "views": "781,418,339 views (YouTube channel About page (More info), rendered via WordPress mShots and fetched by Google Slides, 14 Oct 2026)",
+        "joined": "Joined May 2, 2018",
         "image": "Official YouTube channel avatar, 900x900, via https://unavatar.io/youtube/QuynhThi"
       }
     },
@@ -81,7 +82,7 @@
       "handle": "@HaLinhOfficial",
       "url": "https://www.youtube.com/@HaLinhOfficial",
       "hook": "Straight-talking cosmetics reviews before you buy",
-      "bio": "Hà Linh Official puts makeup and skincare to the test, from budget drugstore picks to Chinese and Korean color cosmetics, with ingredient-led breakdowns and clear verdicts on camera. Shoppers tune in before they buy, which has driven 395M lifetime views across 2.22M subscribers. Best fit for skincare, color cosmetics, e-commerce marketplaces, beauty retail and new product launches.",
+      "bio": "Hà Linh Official puts makeup and skincare to the test, from budget drugstore picks to Chinese and Korean color cosmetics, with ingredient-led breakdowns and clear verdicts on camera. Shoppers tune in before they buy, which has driven 405M lifetime views across 2.22M subscribers. Best fit for skincare, color cosmetics, e-commerce marketplaces, beauty retail and new product launches.",
       "pills": [
         "Beauty",
         "Reviews",
@@ -94,16 +95,17 @@
       ],
       "stats": {
         "subscribers": "2.22M",
-        "videos": "452",
-        "views": "395M"
+        "videos": "471",
+        "views": "405M"
       },
       "image": "images/halinh-show.jpg",
       "avatar": "images/halinh-avatar.jpg",
-      "footnote": "Source: Social Blade and vidIQ, Jan 2026 snapshot. Image: official YouTube channel image (@HaLinhOfficial).",
+      "footnote": "Source: YouTube channel About page, 14 Oct 2026. Image: official YouTube channel image (@HaLinhOfficial).",
       "sources": {
-        "subscribers": "Social Blade / vidIQ, Jan 2026 (2.22M)",
-        "videos": "Social Blade (452), vidIQ (451), Jan 2026",
-        "views": "Social Blade 394,638,145 / vidIQ 394.76M, Jan 2026",
+        "subscribers": "2.22M subscribers (YouTube channel About page (More info), rendered via WordPress mShots and fetched by Google Slides, 14 Oct 2026)",
+        "videos": "471 videos (YouTube channel About page (More info), rendered via WordPress mShots and fetched by Google Slides, 14 Oct 2026)",
+        "views": "404,914,727 views (YouTube channel About page (More info), rendered via WordPress mShots and fetched by Google Slides, 14 Oct 2026)",
+        "joined": "Joined Apr 22, 2019",
         "image": "Official YouTube channel avatar, 900x900, via https://unavatar.io/youtube/HaLinhOfficial"
       }
     },
@@ -112,7 +114,7 @@
       "handle": "@trinhpham91",
       "url": "https://www.youtube.com/@trinhpham91",
       "hook": "A decade of trusted skincare picks and beauty favorites",
-      "bio": "Trinh Phạm has shared makeup, skincare and lifestyle videos since 2014, known for her yearly Best of Beauty roundups and budget-smart picks like skincare under 500K VND. Her warm, explanatory style has built 1.2M subscribers and 178M views across nearly 800 videos. A natural fit for skincare, cosmetics, haircare, mother-and-baby and lifestyle brands seeking credible, long-form endorsement.",
+      "bio": "Trinh Phạm has been on YouTube since 2011 and is best known for her yearly Best of Beauty roundups and budget-smart picks like skincare under 500K VND. Her warm, explanatory style has built 1.2M subscribers and 185M views across 840 videos. A natural fit for skincare, cosmetics, haircare, mother-and-baby and lifestyle brands seeking credible, long-form endorsement.",
       "pills": [
         "Skincare",
         "Makeup",
@@ -125,16 +127,17 @@
       ],
       "stats": {
         "subscribers": "1.2M",
-        "videos": "798",
-        "views": "178M"
+        "videos": "840",
+        "views": "185M"
       },
       "image": "images/trinhpham-show.jpg",
       "avatar": "images/trinhpham-avatar.jpg",
-      "footnote": "Source: Influesque and YouTube channel page, accessed Oct 2026. Image: official YouTube channel image (@trinhpham91).",
+      "footnote": "Source: YouTube channel About page, 14 Oct 2026. Image: official YouTube channel image (@trinhpham91).",
       "sources": {
-        "subscribers": "YouTube channel page metadata (1,200,000) and Influesque, Oct 2026",
-        "videos": "Influesque (798), undated listing accessed Oct 2026",
-        "views": "Influesque (178M), undated listing accessed Oct 2026",
+        "subscribers": "1.2M subscribers (YouTube channel About page (More info), rendered via WordPress mShots and fetched by Google Slides, 14 Oct 2026)",
+        "videos": "840 videos (YouTube channel About page (More info), rendered via WordPress mShots and fetched by Google Slides, 14 Oct 2026)",
+        "views": "184,938,641 views (YouTube channel About page (More info), rendered via WordPress mShots and fetched by Google Slides, 14 Oct 2026)",
+        "joined": "Joined Oct 1, 2011",
         "image": "Official YouTube channel avatar, 900x900, via https://unavatar.io/youtube/trinhpham91"
       }
     },
@@ -160,21 +163,21 @@
       },
       "image": "images/changmakeup-show.jpg",
       "avatar": "images/changmakeup-avatar.jpg",
-      "footnote": "Source: Social Blade, 14 Oct 2026. Image: official YouTube channel image (@TrangTracy).",
+      "footnote": "Source: YouTube channel About page, 14 Oct 2026. Image: official YouTube channel image (@TrangTracy).",
       "sources": {
-        "subscribers": "Social Blade (1.19M), 14 Oct 2026",
-        "videos": "Social Blade (238), 14 Oct 2026",
-        "views": "Social Blade (~194M), 14 Oct 2026",
-        "image": "Official YouTube channel avatar, 900x900, via https://unavatar.io/youtube/TrangTracy",
-        "notes": "Gold Play Button and OFÉLIA facts from CafeF (2024) and Vietnamese press profiles. Upload cadence appears low; daily views ~860 on Social Blade."
+        "subscribers": "1.19M subscribers (YouTube channel About page (More info), rendered via WordPress mShots and fetched by Google Slides, 14 Oct 2026)",
+        "videos": "238 videos (YouTube channel About page (More info), rendered via WordPress mShots and fetched by Google Slides, 14 Oct 2026)",
+        "views": "194,004,827 views (YouTube channel About page (More info), rendered via WordPress mShots and fetched by Google Slides, 14 Oct 2026)",
+        "joined": "Joined Mar 19, 2010",
+        "image": "Official YouTube channel avatar, 900x900, via https://unavatar.io/youtube/TrangTracy"
       }
     },
     {
       "name": "Lie Makeup",
-      "handle": "@liemakeup",
+      "handle": "@LieMakeup",
       "url": "https://www.youtube.com/@liemakeup",
       "hook": "Viral makeup challenges built for the Shorts era",
-      "bio": "Lie Makeup turns makeup into a show: blind-bag challenges, random-color looks, lipstick-only faces and bold character transformations, each cut as a quick Shorts reveal. That format scales well, with 886K subscribers and 707M lifetime views, the most views in this lineup. A strong fit for color cosmetics, Shorts-first launches, creative tie-ins and youth lifestyle brands.",
+      "bio": "Lie Makeup turns makeup into a show: blind-bag challenges, random-color looks, lipstick-only faces and bold character transformations, each cut as a quick Shorts reveal. That format scales well, with 897K subscribers and 720M lifetime views from 721 uploads since 2017. A strong fit for color cosmetics, beauty retail, Shorts-first launches, creative tie-ins and youth lifestyle brands.",
       "pills": [
         "Makeup",
         "Challenges",
@@ -186,18 +189,20 @@
         "Challenges"
       ],
       "stats": {
-        "subscribers": "886K",
-        "videos": "713",
-        "views": "707M"
+        "subscribers": "897K",
+        "videos": "721",
+        "views": "720M"
       },
       "image": "images/liemakeup-show.jpg",
       "avatar": "images/liemakeup-avatar.jpg",
-      "footnote": "Source: vidIQ, 26 Jul 2026. Image: official YouTube channel image (@liemakeup).",
+      "footnote": "Source: YouTube About page, 14 Oct 2026; description now also lists AI 3D animation. Image: official channel image.",
       "sources": {
-        "subscribers": "vidIQ (886K), 26 Jul 2026",
-        "videos": "vidIQ (713), 26 Jul 2026",
-        "views": "vidIQ (706.8M), 26 Jul 2026",
-        "image": "Official YouTube channel avatar, 900x900, via https://unavatar.io/youtube/liemakeup"
+        "subscribers": "897K subscribers (YouTube channel About page (More info), rendered via WordPress mShots and fetched by Google Slides, 14 Oct 2026)",
+        "videos": "721 videos (YouTube channel About page (More info), rendered via WordPress mShots and fetched by Google Slides, 14 Oct 2026)",
+        "views": "720,315,150 views (YouTube channel About page (More info), rendered via WordPress mShots and fetched by Google Slides, 14 Oct 2026)",
+        "joined": "Joined Sep 16, 2017",
+        "image": "Official YouTube channel avatar, 900x900, via https://unavatar.io/youtube/liemakeup",
+        "notes": "About description (14 Oct 2026) repositions the channel around AI-made Chinese 3D xianxia animation; banner still reads Makeup, Beauty, Life style and the library is makeup-led."
       }
     }
   ]

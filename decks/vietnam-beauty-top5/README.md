@@ -17,5 +17,5 @@ NODE_PATH=$(npm root -g) node $S/render_deck.cjs $PWD/decks/vietnam-beauty-top5/
 ```
 
 Selection: discovery mode, ranked by subscribers among beauty-led Vietnamese channels.
-YouTube metrics only. Quỳnh Thi's videos and views are not published by any tracker and youtube.com is blocked in this environment, so those two cards are pending until Agent Reach can read her YouTube About page.
-Open items: Hà Linh Official numbers are a Jan 2026 snapshot; Changmakeup uploads rarely now (about 860 daily views on Social Blade).
+YouTube metrics only, read from each channel's YouTube About page on 14 Oct 2026 (rendered via WordPress mShots, fetched by Google Slides).
+Open items: Changmakeup uploads rarely now (about 860 daily views on Social Blade); Lie Makeup's About description now lists AI 3D animation content, so confirm the channel's direction before pitching it.
