@@ -30,7 +30,7 @@
   },
   "grid_slide": {
     "header": "Choose From A Portfolio Of Top Beauty Creators",
-    "footnote": "Ranked by subscribers. Source: YouTube, Social Blade, vidIQ, Influesque, TikTok; 14 Oct 2026. Images: official YouTube channel images."
+    "footnote": "Ranked by subscribers. Source: YouTube, Social Blade, vidIQ, Influesque; 14 Oct 2026. Images: official YouTube channel images."
   },
   "divider_slide": {
     "eyebrow": "Vietnam",
@@ -68,29 +68,13 @@
       },
       "image": "images/quynhthi-show.jpg",
       "avatar": "images/quynhthi-avatar.jpg",
-      "footnote": "Source: YouTube channel page (subscribers); TikTok @msquynhthie (followers, likes); Oct 2026. Image: YouTube channel image.",
+      "footnote": "Source: YouTube channel page (subscribers), Oct 2026; videos and views pending live YouTube fetch. Image: YouTube channel image.",
       "sources": {
         "subscribers": "YouTube channel page structured data (2,860,000), indexed Oct 2026",
-        "videos": "Not published by vidIQ, Social Blade, Playboard, NoxInfluencer, HypeAuditor or Influesque as of 14 Oct 2026. Replaced on slide by TikTok followers.",
-        "views": "Not published by vidIQ, Social Blade, Playboard, NoxInfluencer, HypeAuditor or Influesque as of 14 Oct 2026. Replaced on slide by TikTok likes.",
+        "videos": "Pending: no tracker publishes it; to be read from the YouTube About page via Agent Reach once youtube.com is allowed",
+        "views": "Pending: no tracker publishes it; to be read from the YouTube About page via Agent Reach once youtube.com is allowed",
         "image": "Official YouTube channel avatar, 900x900, via https://unavatar.io/youtube/QuynhThi"
-      },
-      "substitutes": [
-        {
-          "label": "TikTok Followers",
-          "short": "TikTok followers",
-          "value": "2.4M",
-          "icon": "followers",
-          "source": "TikTok profile @msquynhthie, accessed 14 Oct 2026"
-        },
-        {
-          "label": "TikTok Likes",
-          "short": "TikTok likes",
-          "value": "60.8M",
-          "icon": "likes",
-          "source": "TikTok profile @msquynhthie, accessed 14 Oct 2026"
-        }
-      ]
+      }
     },
     {
       "name": "Hà Linh Official",
@@ -190,7 +174,7 @@
       "handle": "@liemakeup",
       "url": "https://www.youtube.com/@liemakeup",
       "hook": "Viral makeup challenges built for the Shorts era",
-      "bio": "Lie Makeup turns makeup into entertainment with blind-bag challenges, random-color looks, lipstick-only faces and dramatic character transformations, many of which first went viral on TikTok. The format travels fast: 886K subscribers and 707M lifetime views, the highest view total in this lineup. Built for color cosmetics, Shorts-first product launches, creative collaborations and youth lifestyle brands.",
+      "bio": "Lie Makeup turns makeup into a show: blind-bag challenges, random-color looks, lipstick-only faces and bold character transformations, each cut as a quick Shorts reveal. That format scales well, with 886K subscribers and 707M lifetime views, the most views in this lineup. A strong fit for color cosmetics, Shorts-first launches, creative tie-ins and youth lifestyle brands.",
       "pills": [
         "Makeup",
         "Challenges",

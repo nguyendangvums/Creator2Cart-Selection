@@ -62,12 +62,11 @@ Primary numbers, in this order:
 2. **Videos Produced**
 3. **Total Channel Views**
 
-**Every creator card shows 3 real public numbers.** If a primary number is still unavailable after the Step 4 gap-fill, replace that card with the next relevant public number from this ladder (first available wins), and say which substitution you made in the hand-off:
-1. Most-viewed video views on the channel ("Top Video Views")
-2. The same creator's TikTok followers, then TikTok likes (official account only)
-3. Instagram followers, then Facebook followers (official account only)
-4. Years on YouTube or join year ("On YouTube Since")
-5. A verifiable milestone count (for example Play Buttons earned)
+**Every creator card shows 3 real public YouTube numbers.** This is a YouTube deck: only YouTube metrics appear, never TikTok, Meta (Facebook, Instagram) or any other platform's numbers, unless the user explicitly asks for them in the current request. If a primary number is still unavailable after the Step 4 gap-fill, replace that card with the next YouTube metric from this ladder (first available wins), and say which substitution you made in the hand-off:
+1. Most-viewed upload on the channel ("Top Video Views")
+2. Long-form uploads or Shorts uploads counted separately from the channel tabs ("Long-form Videos", "Shorts Produced")
+3. Year the channel joined YouTube ("On YouTube Since")
+4. A verifiable YouTube milestone (for example Play Buttons earned)
 
 Put substitutes in the creator's `substitutes` list (label, short, value, icon, source); the builder slots them into the missing positions and uses the first one on the grid slide. Never use monthly views, average views per video, age skew or gender skew, even as substitutes. Format cleanly: 1.95M, ~3,100, 343M, 62.4K, 1.47B. Record the source and date for every number in the deck JSON `sources` block.
 
@@ -145,7 +144,7 @@ Right-column text block (name, hook, bio) sits at left 514, width 732, top 124 o
 
 **Do not generate** a Methodology and Data Caveats slide or an Image Sources slide. Caveats go in footnotes and in the hand-off message.
 
-Combined totals: add what is known; when a creator's primary metric was substituted, show the sum with a trailing "+" (2,201+) and say who is excluded in the footnote. Substitute metrics (TikTok followers and the like) never go into YouTube combined totals.
+Combined totals: add what is known; when a creator's primary metric was substituted, show the sum with a trailing "+" (2,201+) and say who is excluded in the footnote. Substitute metrics (top video views and the like) never go into the combined totals.
 
 ---
 

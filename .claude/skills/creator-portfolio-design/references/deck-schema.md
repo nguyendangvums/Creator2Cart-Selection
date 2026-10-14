@@ -45,9 +45,9 @@
       "pills": ["Beauty", "Reviews", "Skincare", "Makeup"],   // 2 to 4
       "grid_pills": ["Reviews", "Skincare"],     // exactly 2
       "stats": {"subscribers": "2.22M", "videos": "452", "views": "395M"},  // null = missing
-      "substitutes": [                           // fill missing stats in order (SKILL.md Step 2 ladder)
-        {"label": "TikTok Followers", "short": "TikTok followers", "value": "2.4M",
-         "icon": "followers", "source": "TikTok @handle, Oct 2026"}
+      "substitutes": [                           // YouTube-only, fill missing stats in order (SKILL.md Step 2 ladder)
+        {"label": "Top Video Views", "short": "top video views", "value": "12.4M",
+         "icon": "play", "source": "yt-dlp /videos tab, Oct 2026"}
       ],                                         // icons: subscribers, videos, views, followers, likes, calendar, play
       "image": "images/halinh-show.jpg",         // official channel image, 884x900; missing = placeholder
       "avatar": "images/halinh-avatar.jpg",

@@ -17,5 +17,5 @@ NODE_PATH=$(npm root -g) node $S/render_deck.cjs $PWD/decks/vietnam-beauty-top5/
 ```
 
 Selection: discovery mode, ranked by subscribers among beauty-led Vietnamese channels.
-Substitutions: Quỳnh Thi's videos and views are not published by any tracker, so her cards show TikTok followers (2.4M) and likes (60.8M) from @msquynhthie instead.
+YouTube metrics only. Quỳnh Thi's videos and views are not published by any tracker and youtube.com is blocked in this environment, so those two cards are pending until Agent Reach can read her YouTube About page.
 Open items: Hà Linh Official numbers are a Jan 2026 snapshot; Changmakeup uploads rarely now (about 860 daily views on Social Blade).
