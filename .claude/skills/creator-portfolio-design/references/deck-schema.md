@@ -16,7 +16,7 @@
     "summary": "...",                            // bio style, max 4 lines
     "pills": ["Beauty", "Makeup", "Skincare", "Reviews"],
     "combined": {"subscribers": "8.36M", "videos": "2,201+", "views": "1.47B+"},
-    "mosaic": ["images/a-mosaic.jpg", "..."],    // first tile is wide; up to 5
+    "mosaic": ["images/a-tile.jpg", "..."],      // 5 square tiles: 2 large, then 3 small
     "image": "images/x.jpg",                     // used only when mosaic is empty
     "top": 96,                                   // optional text block top (px)
     "footnote": "..."
@@ -44,14 +44,18 @@
       "bio": "...",                              // 55 to 75 words, max 4 lines
       "pills": ["Beauty", "Reviews", "Skincare", "Makeup"],   // 2 to 4
       "grid_pills": ["Reviews", "Skincare"],     // exactly 2
-      "stats": {"subscribers": "2.22M", "videos": "452", "views": "395M"},  // null = TBC
-      "image": "images/halinh-show.jpg",         // missing = dashed placeholder
+      "stats": {"subscribers": "2.22M", "videos": "452", "views": "395M"},  // null = missing
+      "substitutes": [                           // fill missing stats in order (SKILL.md Step 2 ladder)
+        {"label": "TikTok Followers", "short": "TikTok followers", "value": "2.4M",
+         "icon": "followers", "source": "TikTok @handle, Oct 2026"}
+      ],                                         // icons: subscribers, videos, views, followers, likes, calendar, play
+      "image": "images/halinh-show.jpg",         // official channel image, 884x900; missing = placeholder
       "avatar": "images/halinh-avatar.jpg",
       "top": 124,                                // optional text block top (px)
       "footnote": "...",
       "sources": {                               // not rendered; audit trail
         "subscribers": "Social Blade / vidIQ, Jan 2026 (2.22M)",
-        "videos": "...", "views": "...", "image": "https://i.ytimg.com/vi/<id>/maxresdefault.jpg"
+        "videos": "...", "views": "...", "image": "official channel avatar, 900x900 (yt3 =s900 or unavatar.io/youtube/<handle>)"
       }
     }
   ]

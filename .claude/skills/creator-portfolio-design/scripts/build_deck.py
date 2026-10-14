@@ -39,6 +39,19 @@ ICONS = {
         '<path d="m6.2 5.3 3.1 3.9"/><path d="m12.4 3.4 3.1 4"/>'
         '<path d="M3 11h18v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/>'
     ),
+    "followers": (
+        '<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>'
+        '<line x1="19" x2="19" y1="8" y2="14"/><line x1="22" x2="16" y1="11" y2="11"/>'
+    ),
+    "likes": (
+        '<path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2'
+        '-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>'
+    ),
+    "calendar": (
+        '<path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/>'
+        '<path d="M3 10h18"/>'
+    ),
+    "play": '<polygon points="6 3 20 12 6 21 6 3"/>',
     "views": (
         '<path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 '
         '1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"/>'
@@ -169,9 +182,11 @@ body {
   display: flex; align-items: center; justify-content: center;
   color: var(--tbc); font: 500 16px/1.3 var(--font-body);
 }
-.mosaic { display: grid; grid-template-columns: 217px 217px; grid-template-rows: 200px 117px 117px; gap: 8px; }
-.mosaic img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.mosaic .wide { grid-column: 1 / span 2; }
+.mosaic { display: flex; flex-direction: column; gap: 8px; }
+.mosaic .row { display: flex; gap: 8px; }
+.mosaic img { object-fit: cover; display: block; flex: none; }
+.mosaic .big img { width: 217px; height: 217px; }
+.mosaic .small img { width: 142px; height: 142px; }
 
 /* Bottom-left dark bar with YouTube play badge */
 .bar {
@@ -327,14 +342,35 @@ class Builder:
             f'aria-hidden="true">{ICONS[kind]}</svg>'
         )
 
-    def stat_cards(self, stats, labels, stacked=False, style=""):
+    @staticmethod
+    def missing(value):
+        return value is None or str(value).strip().upper() in ("", "TBC")
+
+    def card_specs(self, stats, labels, substitutes=(), who=""):
+        """Three (icon, label, value) cards. A missing primary metric is replaced by
+        the next substitute public metric, so TBC only appears when none is left."""
+        subs = list(substitutes or [])
+        specs = []
+        for kind in ("subscribers", "videos", "views"):
+            value = stats.get(kind)
+            if not self.missing(value):
+                specs.append((kind, labels[kind], value))
+            elif subs:
+                sub = subs.pop(0)
+                specs.append((sub.get("icon", "play"), sub["label"], sub["value"]))
+            else:
+                self.warnings.append(f"{who or 'deck'}: {kind} missing and no substitute metric (renders TBC)")
+                specs.append((kind, labels[kind], None))
+        return specs
+
+    def stat_cards(self, stats, labels, stacked=False, style="", substitutes=(), who=""):
         cls = "stats stacked" if stacked else "stats"
         cards = []
-        for kind in ("subscribers", "videos", "views"):
+        for icon, label, value in self.card_specs(stats, labels, substitutes, who):
             cards.append(
-                f'<div class="card">{self.icon(kind)}'
-                f'<div class="label">{esc(labels[kind])}</div>'
-                f'{self.num(stats.get(kind))}</div>'
+                f'<div class="card">{self.icon(icon)}'
+                f'<div class="label">{esc(label)}</div>'
+                f'{self.num(value)}</div>'
             )
         return f'<div class="{cls}" style="{style}">{"".join(cards)}</div>'
 
@@ -382,11 +418,12 @@ class Builder:
             imgs = []
             for i, rel in enumerate(tiles[:5]):
                 src = self.img_src(rel)
-                cls = ' class="wide"' if i == 0 else ""
                 if src:
-                    imgs.append(f'<img{cls} src="{src}" alt="Creator show capture {i + 1}">')
+                    imgs.append(f'<img src="{src}" alt="Creator channel image {i + 1}">')
             shot = (
-                f'<div class="shot"><div class="mosaic">{"".join(imgs)}</div></div>'
+                f'<div class="shot"><div class="mosaic">'
+                f'<div class="row big">{"".join(imgs[:2])}</div>'
+                f'<div class="row small">{"".join(imgs[2:5])}</div></div></div>'
             )
         else:
             shot = self.shot(t.get("image"), t["header"])
@@ -409,11 +446,14 @@ class Builder:
             src = self.img_src(c.get("avatar"))
             avatar = f'<img src="{src}" alt="{esc(c["name"])} avatar">' if src else ""
             views = c["stats"].get("views")
-            views_html = (
-                f'<b>{esc(views)}</b> channel views'
-                if views and str(views).upper() != "TBC"
-                else '<b class="tbc">TBC</b> channel views'
-            )
+            alt = [s for s in c.get("substitutes", [])]
+            if not self.missing(views):
+                views_html = f'<b>{esc(views)}</b> channel views'
+            elif alt:
+                short = alt[0].get("short", alt[0]["label"])
+                views_html = f'<b>{esc(alt[0]["value"])}</b> {esc(short)}'
+            else:
+                views_html = '<b class="tbc">TBC</b> channel views'
             subs = c["stats"].get("subscribers")
             subs_cls = "gsubs" if subs and str(subs).upper() != "TBC" else "gsubs tbc"
             pills = "".join(f'<span class="pill">{esc(p)}</span>' for p in c["grid_pills"][:2])
@@ -458,7 +498,7 @@ class Builder:
             f'<p class="hook">{esc(c["hook"])}</p>'
             f'<p class="bio">{esc(c["bio"])}</p></div>'
             f'{self.pills_row(c["pills"])}'
-            f'{self.stat_cards(c["stats"], STAT_LABELS)}'
+            f'{self.stat_cards(c["stats"], STAT_LABELS, substitutes=c.get("substitutes"), who=c["name"])}'
             f'{self.footnote(c["footnote"])}{self.chrome()}</section>'
         )
 

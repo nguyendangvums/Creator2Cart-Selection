@@ -6,7 +6,7 @@ First test of the `creator-portfolio-design` skill (`.claude/skills/creator-port
 - `vietnam-beauty-top5.pdf`: 8-page PDF, 1280x720 per page.
 - `previews/`: PNG of each slide at 2x.
 - `deck.json`: all copy, numbers, and a `sources` audit trail per creator.
-- `images/`: crops of YouTube thumbnails from each creator's own uploads.
+- `images/`: each creator's official YouTube channel image (900x900) as show image, avatar and mosaic tile.
 
 Rebuild after editing `deck.json`:
 
@@ -17,4 +17,5 @@ NODE_PATH=$(npm root -g) node $S/render_deck.cjs $PWD/decks/vietnam-beauty-top5/
 ```
 
 Selection: discovery mode, ranked by subscribers among beauty-led Vietnamese channels.
-Open items: Quỳnh Thi videos and views are TBC (no tracker publishes them); Hà Linh Official numbers are a Jan 2026 snapshot; Changmakeup uploads rarely now (about 860 daily views on Social Blade).
+Substitutions: Quỳnh Thi's videos and views are not published by any tracker, so her cards show TikTok followers (2.4M) and likes (60.8M) from @msquynhthie instead.
+Open items: Hà Linh Official numbers are a Jan 2026 snapshot; Changmakeup uploads rarely now (about 860 daily views on Social Blade).

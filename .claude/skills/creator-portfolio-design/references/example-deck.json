@@ -20,17 +20,17 @@
       "views": "1.47B+"
     },
     "mosaic": [
-      "images/liemakeup-mosaic.jpg",
-      "images/quynhthi-mosaic.jpg",
-      "images/halinh-mosaic.jpg",
-      "images/trinhpham-mosaic.jpg",
-      "images/changmakeup-mosaic.jpg"
+      "images/quynhthi-tile.jpg",
+      "images/halinh-tile.jpg",
+      "images/trinhpham-tile.jpg",
+      "images/changmakeup-tile.jpg",
+      "images/liemakeup-tile.jpg"
     ],
-    "footnote": "Source: YouTube, Social Blade, vidIQ, Influesque; 14 Oct 2026. Videos and views exclude Quỳnh Thi (TBC). Images: YouTube."
+    "footnote": "Source: YouTube, Social Blade, vidIQ, Influesque; 14 Oct 2026. Videos and views exclude Quỳnh Thi. Images: YouTube channel images."
   },
   "grid_slide": {
     "header": "Choose From A Portfolio Of Top Beauty Creators",
-    "footnote": "Ranked by subscribers. Source: YouTube, Social Blade, vidIQ, Influesque; accessed 14 Oct 2026. Avatars cropped from YouTube thumbnails."
+    "footnote": "Ranked by subscribers. Source: YouTube, Social Blade, vidIQ, Influesque, TikTok; 14 Oct 2026. Images: official YouTube channel images."
   },
   "divider_slide": {
     "eyebrow": "Vietnam",
@@ -68,13 +68,29 @@
       },
       "image": "images/quynhthi-show.jpg",
       "avatar": "images/quynhthi-avatar.jpg",
-      "footnote": "Source: YouTube channel page (subscribers), Oct 2026; videos and views TBC. Image: YouTube thumbnail, Quỳnh Thi (@QuynhThi).",
+      "footnote": "Source: YouTube channel page (subscribers); TikTok @msquynhthie (followers, likes); Oct 2026. Image: YouTube channel image.",
       "sources": {
         "subscribers": "YouTube channel page structured data (2,860,000), indexed Oct 2026",
-        "videos": "Not published by vidIQ, Social Blade, Playboard, NoxInfluencer, HypeAuditor or Influesque as of 14 Oct 2026",
-        "views": "Not published by vidIQ, Social Blade, Playboard, NoxInfluencer, HypeAuditor or Influesque as of 14 Oct 2026",
-        "image": "https://i.ytimg.com/vi/9xSW_RiQcVw/maxresdefault.jpg"
-      }
+        "videos": "Not published by vidIQ, Social Blade, Playboard, NoxInfluencer, HypeAuditor or Influesque as of 14 Oct 2026. Replaced on slide by TikTok followers.",
+        "views": "Not published by vidIQ, Social Blade, Playboard, NoxInfluencer, HypeAuditor or Influesque as of 14 Oct 2026. Replaced on slide by TikTok likes.",
+        "image": "Official YouTube channel avatar, 900x900, via https://unavatar.io/youtube/QuynhThi"
+      },
+      "substitutes": [
+        {
+          "label": "TikTok Followers",
+          "short": "TikTok followers",
+          "value": "2.4M",
+          "icon": "followers",
+          "source": "TikTok profile @msquynhthie, accessed 14 Oct 2026"
+        },
+        {
+          "label": "TikTok Likes",
+          "short": "TikTok likes",
+          "value": "60.8M",
+          "icon": "likes",
+          "source": "TikTok profile @msquynhthie, accessed 14 Oct 2026"
+        }
+      ]
     },
     {
       "name": "Hà Linh Official",
@@ -99,12 +115,12 @@
       },
       "image": "images/halinh-show.jpg",
       "avatar": "images/halinh-avatar.jpg",
-      "footnote": "Source: Social Blade and vidIQ, Jan 2026 snapshot. Image: YouTube thumbnail, Hà Linh Official (@HaLinhOfficial).",
+      "footnote": "Source: Social Blade and vidIQ, Jan 2026 snapshot. Image: official YouTube channel image (@HaLinhOfficial).",
       "sources": {
         "subscribers": "Social Blade / vidIQ, Jan 2026 (2.22M)",
         "videos": "Social Blade (452), vidIQ (451), Jan 2026",
         "views": "Social Blade 394,638,145 / vidIQ 394.76M, Jan 2026",
-        "image": "https://i.ytimg.com/vi/bH_A3wFwqpc/maxresdefault.jpg"
+        "image": "Official YouTube channel avatar, 900x900, via https://unavatar.io/youtube/HaLinhOfficial"
       }
     },
     {
@@ -130,12 +146,12 @@
       },
       "image": "images/trinhpham-show.jpg",
       "avatar": "images/trinhpham-avatar.jpg",
-      "footnote": "Source: Influesque and YouTube channel page, accessed Oct 2026. Image: YouTube thumbnail, Trinh Phạm (@trinhpham91).",
+      "footnote": "Source: Influesque and YouTube channel page, accessed Oct 2026. Image: official YouTube channel image (@trinhpham91).",
       "sources": {
         "subscribers": "YouTube channel page metadata (1,200,000) and Influesque, Oct 2026",
         "videos": "Influesque (798), undated listing accessed Oct 2026",
         "views": "Influesque (178M), undated listing accessed Oct 2026",
-        "image": "https://i.ytimg.com/vi/V-qTmUYqhMo/maxresdefault.jpg"
+        "image": "Official YouTube channel avatar, 900x900, via https://unavatar.io/youtube/trinhpham91"
       }
     },
     {
@@ -160,12 +176,12 @@
       },
       "image": "images/changmakeup-show.jpg",
       "avatar": "images/changmakeup-avatar.jpg",
-      "footnote": "Source: Social Blade, 14 Oct 2026. Image: YouTube thumbnail, \"Chẳng có lần đầu nào là dễ dàng\" featuring Changmakeup.",
+      "footnote": "Source: Social Blade, 14 Oct 2026. Image: official YouTube channel image (@TrangTracy).",
       "sources": {
         "subscribers": "Social Blade (1.19M), 14 Oct 2026",
         "videos": "Social Blade (238), 14 Oct 2026",
         "views": "Social Blade (~194M), 14 Oct 2026",
-        "image": "https://i.ytimg.com/vi/d1UvSIF_YPg/maxresdefault.jpg",
+        "image": "Official YouTube channel avatar, 900x900, via https://unavatar.io/youtube/TrangTracy",
         "notes": "Gold Play Button and OFÉLIA facts from CafeF (2024) and Vietnamese press profiles. Upload cadence appears low; daily views ~860 on Social Blade."
       }
     },
@@ -192,12 +208,12 @@
       },
       "image": "images/liemakeup-show.jpg",
       "avatar": "images/liemakeup-avatar.jpg",
-      "footnote": "Source: vidIQ, 26 Jul 2026. Image: YouTube thumbnail, Lie Makeup (@liemakeup).",
+      "footnote": "Source: vidIQ, 26 Jul 2026. Image: official YouTube channel image (@liemakeup).",
       "sources": {
         "subscribers": "vidIQ (886K), 26 Jul 2026",
         "videos": "vidIQ (713), 26 Jul 2026",
         "views": "vidIQ (706.8M), 26 Jul 2026",
-        "image": "https://i.ytimg.com/vi/2Rmh2SpoQ_A/maxresdefault.jpg"
+        "image": "Official YouTube channel avatar, 900x900, via https://unavatar.io/youtube/liemakeup"
       }
     }
   ]

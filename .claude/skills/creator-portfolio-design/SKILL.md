@@ -56,13 +56,20 @@ Product type: advertiser sales deck. Industry: creator partnerships. Stack: stat
 ### Step 1: Take the creator mix and resolve channels
 Use only the creators provided (or confirmed) by the user, preserving their exact input order. Do not run a generic "top 10" discovery search unless explicitly asked (see Discovery mode). Search "[Creator Name] YouTube Channel" to resolve the canonical channel (handle and channel ID). Flag in the footnote if the creator operates multiple channels.
 
-### Step 2: Pull only the 3 public channel numbers
-For each channel collect only:
+### Step 2: Pull 3 public numbers per channel (always 3, never TBC)
+Primary numbers, in this order:
 1. **Subscribers**
 2. **Videos Produced**
 3. **Total Channel Views**
 
-Never include monthly views, average views per video, age skew or gender skew. Format cleanly: 1.95M, ~3,100, 343M, 62.4K, 1.47B. Record the source and date for every number in the deck JSON `sources` block.
+**Every creator card shows 3 real public numbers.** If a primary number is still unavailable after the Step 4 gap-fill, replace that card with the next relevant public number from this ladder (first available wins), and say which substitution you made in the hand-off:
+1. Most-viewed video views on the channel ("Top Video Views")
+2. The same creator's TikTok followers, then TikTok likes (official account only)
+3. Instagram followers, then Facebook followers (official account only)
+4. Years on YouTube or join year ("On YouTube Since")
+5. A verifiable milestone count (for example Play Buttons earned)
+
+Put substitutes in the creator's `substitutes` list (label, short, value, icon, source); the builder slots them into the missing positions and uses the first one on the grid slide. Never use monthly views, average views per video, age skew or gender skew, even as substitutes. Format cleanly: 1.95M, ~3,100, 343M, 62.4K, 1.47B. Record the source and date for every number in the deck JSON `sources` block.
 
 ### Step 3: Assign content-type pills
 Tag each channel with 2 to 4 content verticals (Business, Economics, History, Self-Development, Lifestyle, Beauty, Fitness, Makeup, Skincare, Reviews). One balanced row above the stat cards, preceded by the uppercase tracked CONTENT label. Also pick the 2 most representative for the grid slide (`grid_pills`).
@@ -70,13 +77,14 @@ Tag each channel with 2 to 4 content verticals (Business, Economics, History, Se
 ### Step 4: Mandatory internet gap-fill (numbers and images)
 If any of the 3 numbers or the show image is missing from the YouTube lookup, search other published sources before falling back.
 - **Numbers:** vidIQ, Social Blade, NoxInfluencer, HypeAuditor, Playboard, SponsorRadar, Influesque, and news or press articles in English and the local language.
-- **Images:**
-  1. Search "[Channel Name] YouTube Channel" to get the official avatar (yt3.googleusercontent.com), banner, or a thumbnail of one of the creator's own uploads (`https://i.ytimg.com/vi/<videoId>/maxresdefault.jpg`, fall back to `hqdefault.jpg`).
-  2. If not found, try podcast platforms (Podbean, Spotify, Apple Podcasts), official Facebook or Instagram pages, and reputable news or blog profiles.
-  3. **Verify** the image depicts the actual show or creator. Look at it. Discard keyword matches from other channels, re-uploads and compilations.
+- **Images (channel image first, never video-frame crops):**
+  1. Image-search "[Channel Name] YouTube Channel" and take the **official channel image**: the avatar on yt3.googleusercontent.com, requested at full size (`=s900` or larger), or the channel banner. This is the default show image and grid avatar.
+  2. Do not crop frames or thumbnails from videos for the show image. They are too low-resolution once cropped to the 442x450 panel. The source must be at least 884px wide (2x of the panel) without upscaling.
+  3. If no official channel image exists, try podcast platforms (Podbean, Spotify, Apple Podcasts), official Facebook or Instagram profile images, and reputable news or blog profiles, at the same resolution bar.
+  4. **Verify** the image belongs to the right channel. Look at it. Discard keyword matches from other channels, re-uploads and fan accounts. If the official image is a logo or illustration rather than a face, still use it (it is the channel's own image) and mention it in the hand-off.
 
-### Step 5: Last-resort TBC and placeholder rule
-Show TBC (muted grey #9E9E9E) or the dashed "Add show image capture" placeholder only after every published source above is exhausted. Never invent, estimate, or use multi-year-old totals. Never AI-generate photos of real creators. Snapshots under 12 months old are acceptable when the footnote states the date.
+### Step 5: Last-resort rule
+TBC should not appear on a creator card: work the Step 2 substitution ladder first. TBC (muted grey #9E9E9E) or the dashed "Add show image capture" placeholder is allowed only when no ladder metric or official image exists anywhere, and must be called out to the user. Never invent, estimate, or use multi-year-old totals. Never AI-generate photos of real creators. Snapshots under 12 months old are acceptable when the footnote states the date.
 
 ### Step 6: Write slide copy (Google Sans)
 - **Hook:** at most 12 words and must fit one line (about 55 characters at 25px in the 732px column). Punchy positioning statement under the channel name.
@@ -86,7 +94,7 @@ Show TBC (muted grey #9E9E9E) or the dashed "Add show image capture" placeholder
 UX writing standards (ui-ux-pro-max): active voice, plain language, front-load the key fact, consistent terms (pick "views" or "channel views" and keep it). House rules: no em dashes, no emoji, standard sentence capitalization in body copy, no claims that the sources do not support.
 
 ### Step 7: Build
-1. Save cropped images next to the deck JSON: `images/<slug>-show.jpg` (884x900, the 2x of 442x450, face in the upper 60% because the bottom 180px fades to black), `images/<slug>-avatar.jpg` (240x240, face centered), and title-slide mosaic tiles (`884x400` for the first, `434x234` for the other four).
+1. From each official channel image (900x900 avatar), save next to the deck JSON: `images/<slug>-show.jpg` (884x900 centre crop, the 2x of 442x450), `images/<slug>-avatar.jpg` (240x240) and `images/<slug>-tile.jpg` (434x434) for the title-slide mosaic (two large tiles over three small ones, in deck order).
 2. Write `deck.json` following `references/deck-schema.md` (see `references/example-deck.json`).
 3. Build: `python3 scripts/build_deck.py deck.json -o <name>.html` (images inlined as data URIs, single portable file). The builder warns on pill counts, bio word counts and hook length.
 
@@ -137,7 +145,7 @@ Right-column text block (name, hook, bio) sits at left 514, width 732, top 124 o
 
 **Do not generate** a Methodology and Data Caveats slide or an Image Sources slide. Caveats go in footnotes and in the hand-off message.
 
-Combined totals: add what is known; when any creator is TBC for a metric, show the sum with a trailing "+" (2,201+) and say who is excluded in the footnote.
+Combined totals: add what is known; when a creator's primary metric was substituted, show the sum with a trailing "+" (2,201+) and say who is excluded in the footnote. Substitute metrics (TikTok followers and the like) never go into YouTube combined totals.
 
 ---
 
@@ -145,7 +153,8 @@ Combined totals: add what is known; when any creator is TBC for a metric, show t
 
 Cloud sandboxes often block youtube.com, yt3.googleusercontent.com, i.ytimg.com and the tracker sites. When that happens:
 - **Numbers:** use the WebSearch tool against vidIQ, Social Blade, Playboard, Influesque and YouTube channel pages. Search snippets carry the figures and their snapshot dates. Prefer the freshest dated figure; note the date in the footnote.
-- **Images:** if the Google Slides and Google Drive connectors are available, create a scratch presentation, insert candidate `i.ytimg.com` thumbnails with Slides `createImage` (Google fetches the URL server side), export it with Drive `download_file_content` as `application/pdf` (the large result is saved to a file), decode the base64, extract images with `pdfimages -j`, inspect them, then trash the scratch file. Name the scratch file clearly so the user knows it is safe to delete.
+- **Images:** if the Google Slides and Google Drive connectors are available, create a scratch presentation and insert each channel's official image with Slides `createImage` (Google fetches the URL server side). Use the yt3 avatar URL at `=s900` when you have it; otherwise `https://unavatar.io/youtube/<handle>?fallback=false`, which resolves to the channel's own avatar at 900x900. Export the presentation with Drive `download_file_content` as `application/pdf` (the large result is saved to a file), decode the base64, extract with `pdfimages -all`, inspect every image, then trash the scratch file. Name scratch files clearly so the user knows they are safe to delete.
+- Google Sheets IMPORTXML is not a usable fallback: uploaded CSV neutralizes IMPORT formulas, and uploaded XLSX returns #REF! until someone clicks "Allow access" in the Sheets UI.
 - If neither path works, tell the user which hosts to allow in the environment's network settings and fall back to the Step 5 placeholder.
 
 ## Files
