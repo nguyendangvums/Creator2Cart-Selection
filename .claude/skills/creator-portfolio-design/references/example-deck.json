@@ -1,0 +1,204 @@
+{
+  "page_title": "Vietnam Beauty Portfolio",
+  "category": "Beauty",
+  "market": "Vietnam",
+  "brand_fit": null,
+  "selection_note": "Discovery run: the five largest beauty-led Vietnamese YouTube channels by subscribers found across vidIQ, Social Blade, Influesque and YouTube page data on 14 Oct 2026.",
+  "title_slide": {
+    "header": "Vietnam Beauty Creator Portfolio",
+    "subtitle": "Five beauty-led channels reaching 8.36M subscribers",
+    "summary": "A curated lineup of Vietnam's largest beauty-led YouTube channels, spanning honest product reviews, skincare routines, lipstick expertise and viral makeup entertainment. Together they give brands one route to Vietnamese beauty shoppers, from long-form reviews to Shorts.",
+    "pills": [
+      "Beauty",
+      "Makeup",
+      "Skincare",
+      "Reviews"
+    ],
+    "combined": {
+      "subscribers": "8.36M",
+      "videos": "2,201+",
+      "views": "1.47B+"
+    },
+    "mosaic": [
+      "images/liemakeup-mosaic.jpg",
+      "images/quynhthi-mosaic.jpg",
+      "images/halinh-mosaic.jpg",
+      "images/trinhpham-mosaic.jpg",
+      "images/changmakeup-mosaic.jpg"
+    ],
+    "footnote": "Source: YouTube, Social Blade, vidIQ, Influesque; 14 Oct 2026. Videos and views exclude Quỳnh Thi (TBC). Images: YouTube."
+  },
+  "grid_slide": {
+    "header": "Choose From A Portfolio Of Top Beauty Creators",
+    "footnote": "Ranked by subscribers. Source: YouTube, Social Blade, vidIQ, Influesque; accessed 14 Oct 2026. Avatars cropped from YouTube thumbnails."
+  },
+  "divider_slide": {
+    "eyebrow": "Vietnam",
+    "title": "Beauty",
+    "description": "From ingredient-led reviews to viral makeup transformations, Vietnam's beauty creators shape what shoppers try next. This lineup covers skincare, color cosmetics and lipstick expertise across long-form videos and Shorts.",
+    "pills": [
+      "Makeup",
+      "Skincare",
+      "Reviews",
+      "Tutorials"
+    ],
+    "footnote": "Combined totals. Source: YouTube, trackers; 14 Oct 2026."
+  },
+  "creators": [
+    {
+      "name": "Quỳnh Thi",
+      "handle": "@QuynhThi",
+      "url": "https://www.youtube.com/channel/UCjAeWwzzt28ey79UU2QnlOw",
+      "hook": "Lifestyle-first beauty for Vietnam's young women",
+      "bio": "Quỳnh Thi blends makeup looks, skincare tips, self-care vlogs and candid storytelling into one lifestyle-led beauty channel. Viewers follow her personality-first take on beauty trends, and 2.86M subscribers make it the largest beauty-led channel in this lineup. A strong fit for skincare, cosmetics, personal care and youth lifestyle brands that want mass reach with an authentic voice.",
+      "pills": [
+        "Beauty",
+        "Lifestyle",
+        "Skincare",
+        "Vlog"
+      ],
+      "grid_pills": [
+        "Beauty",
+        "Lifestyle"
+      ],
+      "stats": {
+        "subscribers": "2.86M",
+        "videos": null,
+        "views": null
+      },
+      "image": "images/quynhthi-show.jpg",
+      "avatar": "images/quynhthi-avatar.jpg",
+      "footnote": "Source: YouTube channel page (subscribers), Oct 2026; videos and views TBC. Image: YouTube thumbnail, Quỳnh Thi (@QuynhThi).",
+      "sources": {
+        "subscribers": "YouTube channel page structured data (2,860,000), indexed Oct 2026",
+        "videos": "Not published by vidIQ, Social Blade, Playboard, NoxInfluencer, HypeAuditor or Influesque as of 14 Oct 2026",
+        "views": "Not published by vidIQ, Social Blade, Playboard, NoxInfluencer, HypeAuditor or Influesque as of 14 Oct 2026",
+        "image": "https://i.ytimg.com/vi/9xSW_RiQcVw/maxresdefault.jpg"
+      }
+    },
+    {
+      "name": "Hà Linh Official",
+      "handle": "@HaLinhOfficial",
+      "url": "https://www.youtube.com/@HaLinhOfficial",
+      "hook": "Straight-talking cosmetics reviews before you buy",
+      "bio": "Hà Linh Official puts makeup and skincare to the test, from budget drugstore picks to Chinese and Korean color cosmetics, with ingredient-led breakdowns and clear verdicts on camera. Shoppers tune in before they buy, which has driven 395M lifetime views across 2.22M subscribers. Best fit for skincare, color cosmetics, e-commerce marketplaces, beauty retail and new product launches.",
+      "pills": [
+        "Beauty",
+        "Reviews",
+        "Skincare",
+        "Makeup"
+      ],
+      "grid_pills": [
+        "Reviews",
+        "Skincare"
+      ],
+      "stats": {
+        "subscribers": "2.22M",
+        "videos": "452",
+        "views": "395M"
+      },
+      "image": "images/halinh-show.jpg",
+      "avatar": "images/halinh-avatar.jpg",
+      "footnote": "Source: Social Blade and vidIQ, Jan 2026 snapshot. Image: YouTube thumbnail, Hà Linh Official (@HaLinhOfficial).",
+      "sources": {
+        "subscribers": "Social Blade / vidIQ, Jan 2026 (2.22M)",
+        "videos": "Social Blade (452), vidIQ (451), Jan 2026",
+        "views": "Social Blade 394,638,145 / vidIQ 394.76M, Jan 2026",
+        "image": "https://i.ytimg.com/vi/bH_A3wFwqpc/maxresdefault.jpg"
+      }
+    },
+    {
+      "name": "Trinh Phạm",
+      "handle": "@trinhpham91",
+      "url": "https://www.youtube.com/@trinhpham91",
+      "hook": "A decade of trusted skincare picks and beauty favorites",
+      "bio": "Trinh Phạm has shared makeup, skincare and lifestyle videos since 2014, known for her yearly Best of Beauty roundups and budget-smart picks like skincare under 500K VND. Her warm, explanatory style has built 1.2M subscribers and 178M views across nearly 800 videos. A natural fit for skincare, cosmetics, haircare, mother-and-baby and lifestyle brands seeking credible, long-form endorsement.",
+      "pills": [
+        "Skincare",
+        "Makeup",
+        "Reviews",
+        "Lifestyle"
+      ],
+      "grid_pills": [
+        "Skincare",
+        "Makeup"
+      ],
+      "stats": {
+        "subscribers": "1.2M",
+        "videos": "798",
+        "views": "178M"
+      },
+      "image": "images/trinhpham-show.jpg",
+      "avatar": "images/trinhpham-avatar.jpg",
+      "footnote": "Source: Influesque and YouTube channel page, accessed Oct 2026. Image: YouTube thumbnail, Trinh Phạm (@trinhpham91).",
+      "sources": {
+        "subscribers": "YouTube channel page metadata (1,200,000) and Influesque, Oct 2026",
+        "videos": "Influesque (798), undated listing accessed Oct 2026",
+        "views": "Influesque (178M), undated listing accessed Oct 2026",
+        "image": "https://i.ytimg.com/vi/V-qTmUYqhMo/maxresdefault.jpg"
+      }
+    },
+    {
+      "name": "Changmakeup",
+      "handle": "@TrangTracy",
+      "url": "https://www.youtube.com/@TrangTracy",
+      "hook": "The lipstick expert who built her own beauty brand",
+      "bio": "Changmakeup made her name with detailed lipstick swatches and reviews, then launched her own cosmetics label, OFÉLIA, in 2016. She was the first Vietnamese female beauty blogger to earn YouTube's Gold Play Button, and her library of 238 videos has drawn 194M views. Ideal for lip and color cosmetics, beauty retail and founder-led brand storytelling.",
+      "pills": [
+        "Makeup",
+        "Lipstick",
+        "Reviews"
+      ],
+      "grid_pills": [
+        "Makeup",
+        "Lipstick"
+      ],
+      "stats": {
+        "subscribers": "1.19M",
+        "videos": "238",
+        "views": "194M"
+      },
+      "image": "images/changmakeup-show.jpg",
+      "avatar": "images/changmakeup-avatar.jpg",
+      "footnote": "Source: Social Blade, 14 Oct 2026. Image: YouTube thumbnail, \"Chẳng có lần đầu nào là dễ dàng\" featuring Changmakeup.",
+      "sources": {
+        "subscribers": "Social Blade (1.19M), 14 Oct 2026",
+        "videos": "Social Blade (238), 14 Oct 2026",
+        "views": "Social Blade (~194M), 14 Oct 2026",
+        "image": "https://i.ytimg.com/vi/d1UvSIF_YPg/maxresdefault.jpg",
+        "notes": "Gold Play Button and OFÉLIA facts from CafeF (2024) and Vietnamese press profiles. Upload cadence appears low; daily views ~860 on Social Blade."
+      }
+    },
+    {
+      "name": "Lie Makeup",
+      "handle": "@liemakeup",
+      "url": "https://www.youtube.com/@liemakeup",
+      "hook": "Viral makeup challenges built for the Shorts era",
+      "bio": "Lie Makeup turns makeup into entertainment with blind-bag challenges, random-color looks, lipstick-only faces and dramatic character transformations, many of which first went viral on TikTok. The format travels fast: 886K subscribers and 707M lifetime views, the highest view total in this lineup. Built for color cosmetics, Shorts-first product launches, creative collaborations and youth lifestyle brands.",
+      "pills": [
+        "Makeup",
+        "Challenges",
+        "Transformation",
+        "Entertainment"
+      ],
+      "grid_pills": [
+        "Makeup",
+        "Challenges"
+      ],
+      "stats": {
+        "subscribers": "886K",
+        "videos": "713",
+        "views": "707M"
+      },
+      "image": "images/liemakeup-show.jpg",
+      "avatar": "images/liemakeup-avatar.jpg",
+      "footnote": "Source: vidIQ, 26 Jul 2026. Image: YouTube thumbnail, Lie Makeup (@liemakeup).",
+      "sources": {
+        "subscribers": "vidIQ (886K), 26 Jul 2026",
+        "videos": "vidIQ (713), 26 Jul 2026",
+        "views": "vidIQ (706.8M), 26 Jul 2026",
+        "image": "https://i.ytimg.com/vi/2Rmh2SpoQ_A/maxresdefault.jpg"
+      }
+    }
+  ]
+}
