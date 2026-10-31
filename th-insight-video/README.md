@@ -1,6 +1,6 @@
 # TH Creator Content Insight 2026: explainer video
 
-A ~3:18 motion explainer built from the deck "[TH] YouTube Creator Content Insight 2026".
+A 3:18 motion explainer built from the deck "[TH] YouTube Creator Content Insight 2026".
 Built with Remotion (React), keeping the deck's fonts (Plus Jakarta Sans, Google Sans),
 YouTube red palette, icons and illustrations.
 

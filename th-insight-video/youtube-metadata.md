@@ -27,12 +27,12 @@ KEY TAKEAWAYS
 CHAPTERS
 0:00 Thailand on YouTube: the big picture
 0:27 01 Series Nation: lakorn, BL series and variety
-0:52 02 Luk Thung x Rap: Thai music on YouTube
+0:53 02 Luk Thung x Rap: Thai music on YouTube
 1:18 03 Ghost Stories: horror creators and call-in shows
 1:44 04 Talk of the Town: podcasts and long-form talk
-2:09 05 Eat & Travel Thai: food and travel creators
+2:10 05 Eat & Travel Thai: food and travel creators
 2:35 06 Game On: gaming creators and RoV esports
-3:00 Amplify: creator content plus brand ads
+3:01 Amplify: creator content plus brand ads
 
 TOP THAI YOUTUBE CREATORS FEATURED
 Series & TV: one31, WorkpointOfficial, Ch3Thailand, GMMTV, Ch7HD
@@ -104,12 +104,12 @@ Description:
 สารบัญ
 0:00 ภาพรวมคนไทยบน YouTube
 0:27 01 ซีรีส์และละคร
-0:52 02 ลูกทุ่ง x แร็ป
+0:53 02 ลูกทุ่ง x แร็ป
 1:18 03 เรื่องผี
 1:44 04 พอดแคสต์และรายการทอล์ก
-2:09 05 กินเที่ยวไทย
+2:10 05 กินเที่ยวไทย
 2:35 06 เกมและอีสปอร์ต
-3:00 ขยายผล: คอนเทนต์ครีเอเตอร์ควบคู่โฆษณาแบรนด์
+3:01 ขยายผล: คอนเทนต์ครีเอเตอร์ควบคู่โฆษณาแบรนด์
 
 แหล่งข้อมูล: Google / YouTube Works Awards Thailand 2026, Google & Kantar (2026), Google Year in Search Thailand 2025, Social Blade (ก.ย. 2026) และอื่น ๆ ครีเอเตอร์ในวิดีโอใช้เพื่อเป็นตัวอย่างเท่านั้น
 
