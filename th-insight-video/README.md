@@ -33,5 +33,6 @@ Content lives in `src/data.ts`; layout and motion in `src/scenes/*`; shared anim
 ## Captions
 
 ```bash
-node scripts/build-captions.mjs   # writes out/th-creator-insight-2026.en.srt from src/timeline.ts + src/data.ts
+node scripts/build-captions.mjs en   # English captions from src/timeline.ts + src/data.ts
+node scripts/build-captions.mjs th   # Thai captions from scripts/captions.th.ts, same timing
 ```

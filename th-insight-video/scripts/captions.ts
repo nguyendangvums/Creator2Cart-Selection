@@ -1,8 +1,13 @@
 // Builds out/th-creator-insight-2026.en.srt from the same data and timeline the video uses.
-// Run: node scripts/build-captions.mjs
+// Run: node scripts/build-captions.mjs [en|th]
 import {writeFileSync} from 'node:fs';
 import {screens, sections, shining} from '../src/data';
 import {Beat, starts, timeline} from '../src/timeline';
+import {thai} from './captions.th';
+
+const LANG = process.argv[2] === 'th' ? 'th' : 'en';
+// Visible width: Thai vowel and tone marks stack on the base letter and take no space.
+const vis = (t: string) => t.replace(/[\u0E31\u0E34-\u0E3A\u0E47-\u0E4E]/g, '').length;
 
 const FPS = 30;
 const MAX_LINE = 42;
@@ -97,14 +102,14 @@ const cuesFor = (b: Beat): Cue[] => {
 /** Best two-line break with both lines <= MAX_LINE, or null if impossible. */
 const twoLines = (ws: string[]): string[] | null => {
   const t = ws.join(' ');
-  if (t.length <= MAX_LINE) return [t];
+  if (vis(t) <= MAX_LINE) return [t];
   let best: string[] | null = null;
   let bestScore = Infinity;
   for (let k = 1; k < ws.length; k++) {
     const l1 = ws.slice(0, k).join(' ');
     const l2 = ws.slice(k).join(' ');
-    if (l1.length > MAX_LINE || l2.length > MAX_LINE) continue;
-    const score = Math.max(l1.length, l2.length);
+    if (vis(l1) > MAX_LINE || vis(l2) > MAX_LINE) continue;
+    const score = Math.max(vis(l1), vis(l2));
     if (score < bestScore) {
       bestScore = score;
       best = [l1, l2];
@@ -116,14 +121,14 @@ const twoLines = (ws: string[]): string[] | null => {
 /** Split text into the fewest cues of up to two balanced lines, with even text per cue. */
 const chunk = (text: string): string[][] => {
   const words = text.split(' ');
-  for (let n = Math.max(1, Math.ceil(text.length / 84)); n <= words.length; n++) {
-    const target = text.length / n;
+  for (let n = Math.max(1, Math.ceil(vis(text) / 84)); n <= words.length; n++) {
+    const target = vis(text) / n;
     const groups: string[][] = [];
     let cur: string[] = [];
     let acc = 0;
     words.forEach((w, i) => {
       cur.push(w);
-      acc += w.length + 1;
+      acc += vis(w) + 1;
       const left = words.length - i - 1;
       if (acc >= target * (groups.length + 1) && groups.length < n - 1 && left > 0) {
         groups.push(cur);
@@ -154,7 +159,9 @@ timeline.forEach((b, bi) => {
   const begin = starts[bi];
   const sceneEnd = bi + 1 < starts.length ? starts[bi + 1] + 4 : begin + b.dur;
   const items: {reveal: number; lines: string[]}[] = [];
-  for (const c of cuesFor(b)) {
+  const cues = LANG === 'th' ? thai[b.id] : cuesFor(b);
+  if (!cues) throw new Error(`missing ${LANG} captions for ${b.id}`);
+  for (const c of cues) {
     const parts = chunk(c.text);
     parts.forEach((lines, k) => items.push({reveal: begin + Math.round(c.at * b.pace) + 4 + k, lines}));
   }
@@ -163,7 +170,7 @@ timeline.forEach((b, bi) => {
   let prevEnd = 0;
   items.forEach((it, i) => {
     const start = Math.max(it.reveal, prevEnd);
-    const need = Math.min(6, Math.max(1.6, it.lines.join(' ').length / CPS)) * FPS;
+    const need = Math.min(6, Math.max(1.6, vis(it.lines.join(' ')) / CPS)) * FPS;
     const nextReveal = i + 1 < items.length ? items[i + 1].reveal : sceneEnd;
     const end = Math.max(start + need, nextReveal);
     sched.push({start, end, lines: it.lines});
@@ -185,7 +192,7 @@ timeline.forEach((b, bi) => {
 for (let i = 0; i < out.length - 1; i++) out[i].end = Math.min(out[i].end, out[i + 1].start);
 
 const srt = out.map((c, i) => `${i + 1}\n${ts(c.start)} --> ${ts(c.end)}\n${c.lines.join('\n')}\n`).join('\n');
-const target = process.argv[2] ?? 'out/th-creator-insight-2026.en.srt';
+const target = `out/th-creator-insight-2026.${LANG}.srt`;
 writeFileSync(target, srt);
 console.log(`${out.length} cues -> ${target}`);
 const short = out.filter((c) => (c.end - c.start) / FPS < 1.5);

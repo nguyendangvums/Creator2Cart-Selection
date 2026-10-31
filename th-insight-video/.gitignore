@@ -1,5 +1,5 @@
 node_modules/
 out/*
 !out/th-creator-insight-2026.mp4
-!out/th-creator-insight-2026.en.srt
+!out/th-creator-insight-2026.*.srt
 *.log

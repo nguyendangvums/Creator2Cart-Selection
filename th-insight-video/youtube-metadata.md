@@ -1,7 +1,7 @@
 # YouTube upload kit: Thailand Creator Content Insight 2026
 
 Video: `out/th-creator-insight-2026.mp4` (1080p, 5:24)
-Captions: `out/th-creator-insight-2026.en.srt` (English)
+Captions: `out/th-creator-insight-2026.en.srt` (English), `out/th-creator-insight-2026.th.srt` (Thai)
 
 Target keywords: content insight, creator Thailand, YouTube creators, YouTube trend, creator trend, top creator, Thailand niche, plus Thai creator, Thai YouTubers, influencer marketing Thailand, creator economy.
 
@@ -83,7 +83,7 @@ Quick summary: Thailand's six biggest YouTube creator niches in 2026 are Series 
 ## Upload checklist (YouTube Studio)
 
 1. Upload `th-creator-insight-2026.mp4`. Paste the title, description and tags above.
-2. Subtitles: Add language > English > Upload file > "With timing" > `th-creator-insight-2026.en.srt`.
+2. Subtitles: Add language > English > Upload file > "With timing" > `th-creator-insight-2026.en.srt`. Then Add language > Thai > upload `th-creator-insight-2026.th.srt` the same way.
 3. Languages tab: add Thai and paste the Thai title and description below.
 4. Category: Education (best fit for an insight report). Language of video: English.
 5. Thumbnail: big red "TH 2026", headline "What Thailand Watches", 3 to 4 creator avatars. Under 5 words.
