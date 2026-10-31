@@ -43,7 +43,7 @@ Food & travel: BANKII, Jack Pap Ho, Mom Tanad Daek, Jamsai JS, Go Went Go
 Gaming: zbing z., RUOK, HEARTROCKER, PojzPlaza, Garena RoV Thailand
 
 WHO THIS IS FOR
-Marketers, brand managers, agencies and creator partnership teams planning YouTube and influencer campaigns in Thailand and Southeast Asia.
+Marketers, brand managers, agencies and creator partnership teams planning YouTube and influencer campaigns in Thailand.
 
 SOURCES
 Google / YouTube Works Awards Thailand 2026; Google & Kantar (2026); Google Year in Search Thailand 2025; YouTube Thailand year-end lists 2025; Social Blade (Sep 2026); Analytic Edge MMM meta-analysis 2021 to 2025; Nation Thailand; Bangkok Post; Esports Charts; Thailand Game Show 2026. Creators shown for illustration.
@@ -54,7 +54,7 @@ Google / YouTube Works Awards Thailand 2026; Google & Kantar (2026); Google Year
 ## Tags (about 480 characters, paste as is)
 
 ```
-thailand youtube trends 2026, youtube creator trends, top youtube creators thailand, thai youtubers, creator content insight, youtube trends 2026, creator economy southeast asia, influencer marketing thailand, thai content trends, youtube marketing thailand, BL series youtube, luk thung, thai ghost stories, thai podcast, thai food creators, thai gaming youtubers, RoV esports, creator partnerships, SEA creators
+thailand youtube trends 2026, youtube creator trends, top youtube creators thailand, thai youtubers, creator content insight, youtube trends 2026, creator economy thailand, influencer marketing thailand, thai content trends, youtube marketing thailand, BL series youtube, luk thung, thai ghost stories, thai podcast, thai food creators, thai gaming youtubers, RoV esports, creator partnerships, thai creator marketing
 ```
 
 ## Hashtags
@@ -64,13 +64,60 @@ Only the first three show above the title, and they are already in the descripti
 ## Pinned comment (helps search and AI answers pick up a clean summary)
 
 ```
-Quick summary: Thailand's six biggest YouTube passion points in 2026 are Series Nation, Luk Thung x Rap, Ghost Stories, Talk of the Town (podcasts), Eat & Travel Thai and Game On. Which one should we break down next, Vietnam or the Philippines?
+Quick summary: Thailand's six biggest YouTube passion points in 2026 are Series Nation, Luk Thung x Rap, Ghost Stories, Talk of the Town (podcasts), Eat & Travel Thai and Game On. Which Thai creator trend should we deep dive next?
 ```
 
 ## Upload settings
 
 - Category: Science & Technology, or People & Blogs if you want a creator-community feel. For a B2B insight video, Education also works.
-- Language: English. Add a Thai title and description translation in the "Languages" tab to rank for Thai-language searches (for example "เทรนด์ YouTube ไทย 2026", "ยูทูบเบอร์ไทย").
+- Language: English. Paste the Thai title and description below into the "Languages" tab (Thai) so the video ranks for Thai-language searches.
 - Captions: upload an English .srt. The video has on-screen text and no voice, so captions with the key stats are the strongest indexable signal for search and AI summaries.
 - Thumbnail: big red "TH 2026", headline "What Thailand Watches", plus 3 to 4 creator avatars. Keep it under 5 words.
 - Playlist: "Creator Content Insight 2026", ready for future market episodes.
+
+## Thai version (Languages tab > Thai)
+
+Have a Thai-speaking teammate do a quick read before publishing. The wording is natural but should be checked by a native speaker.
+
+Title:
+
+```
+เทรนด์ YouTube ไทย 2026: คนไทยดูอะไร และครีเอเตอร์ท็อปของแต่ละสาย
+```
+
+Description:
+
+```
+ปี 2026 คนไทยดูอะไรบน YouTube? สรุป 6 เทรนด์ครีเอเตอร์ที่กำลังมาแรงในประเทศไทย ภายใน 3 นาที พร้อมข้อมูล ครีเอเตอร์ท็อปในแต่ละสาย โมเมนต์สำคัญที่แบรนด์ควรจับ และโอกาสของแบรนด์
+
+ประเด็นสำคัญ
+• 40% ของยอดวิวบน YouTube ในไทย เกิดขึ้นหลังอัปโหลดไปแล้วมากกว่า 1 เดือน
+• ช่อง YouTube ไทยราว 1,300 ช่อง มีผู้ติดตามเกิน 1 ล้านคน
+• 90% ของผู้ใช้ชาวไทยมองว่า YouTube เป็นแพลตฟอร์มวิดีโอที่น่าเชื่อถือที่สุด
+• YouTube ให้ผลตอบแทนการตลาด (ROI) สูงกว่าทีวีถึง 1.71 เท่า
+• 3 ช่องที่มีผู้ติดตามมากที่สุดในไทยคือช่องทีวี: one31, Workpoint และ Ch3
+• มิวสิกวิดีโอยอดนิยม 10 อันดับแรกของปี 2025 เป็นเพลงไทยทั้งหมด
+• 2 ใน 10 ครีเอเตอร์ท็อปของ YouTube ไทยปี 2025 เป็นสายเล่าเรื่องผี
+• 94% ของ Gen Z ไทยบอกว่า YouTube มีพอดแคสต์ที่ดีที่สุด
+• zbing z. (22 ล้านผู้ติดตาม) มีผู้ติดตามมากกว่าช่องทีวีระดับประเทศ
+
+สารบัญ
+0:00 ภาพรวมคนไทยบน YouTube
+0:27 01 ซีรีส์และละคร
+0:52 02 ลูกทุ่ง x แร็ป
+1:18 03 เรื่องผี
+1:44 04 พอดแคสต์และรายการทอล์ก
+2:09 05 กินเที่ยวไทย
+2:35 06 เกมและอีสปอร์ต
+3:00 ขยายผล: คอนเทนต์ครีเอเตอร์ควบคู่โฆษณาแบรนด์
+
+แหล่งข้อมูล: Google / YouTube Works Awards Thailand 2026, Google & Kantar (2026), Google Year in Search Thailand 2025, Social Blade (ก.ย. 2026) และอื่น ๆ ครีเอเตอร์ในวิดีโอใช้เพื่อเป็นตัวอย่างเท่านั้น
+
+#เทรนด์YouTube #ครีเอเตอร์ไทย #YouTubeTrends
+```
+
+Thai tags (add to the English tags if you have room, 500 character limit in total):
+
+```
+เทรนด์ youtube ไทย, ยูทูบเบอร์ไทย, ครีเอเตอร์ไทย, ซีรีส์วาย, ลูกทุ่ง, เรื่องผี, พอดแคสต์ไทย, กินเที่ยว, เกมเมอร์ไทย
+```
