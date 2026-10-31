@@ -4,11 +4,19 @@ import {C, F} from './theme';
 
 const clamp = {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'} as const;
 
-/** Spring progress 0..1 starting at `delay` frames. */
+/**
+ * Pace stretches every cue time inside a scene (when things appear, when sounds play)
+ * without slowing the motion itself, so dense slides get more reading time.
+ */
+export const PaceContext = React.createContext(1);
+export const usePace = () => React.useContext(PaceContext);
+
+/** Spring progress 0..1 starting at `delay` frames (scaled by pace). */
 export const useIn = (delay: number, damping = 200, durationInFrames?: number) => {
   const frame = useCurrentFrame();
   const {fps} = useVideoConfig();
-  return spring({frame: frame - delay, fps, config: {damping}, durationInFrames});
+  const k = usePace();
+  return spring({frame: frame - delay * k, fps, config: {damping}, durationInFrames});
 };
 
 export const lerp = (p: number, a: number, b: number) => a + (b - a) * p;
@@ -17,11 +25,14 @@ export const lerp = (p: number, a: number, b: number) => a + (b - a) * p;
 // Master level for every sound effect, kept well under the music bed.
 export const SFX_GAIN = 0.5;
 
-export const Sfx: React.FC<{at: number; name: string; vol?: number}> = ({at, name, vol = 0.6}) => (
-  <Sequence from={Math.max(0, Math.round(at))} durationInFrames={90} layout="none">
-    <Audio src={staticFile(`sfx/${name}.wav`)} volume={vol * SFX_GAIN} />
-  </Sequence>
-);
+export const Sfx: React.FC<{at: number; name: string; vol?: number}> = ({at, name, vol = 0.6}) => {
+  const k = usePace();
+  return (
+    <Sequence from={Math.max(0, Math.round(at * k))} durationInFrames={90} layout="none">
+      <Audio src={staticFile(`sfx/${name}.wav`)} volume={vol * SFX_GAIN} />
+    </Sequence>
+  );
+};
 
 /** Tinted icon: uses the deck icon's alpha as a mask. */
 export const Icon: React.FC<{name: string; size: number; color?: string; style?: React.CSSProperties}> = ({
@@ -159,9 +170,10 @@ export const Headline: React.FC<{
   weight?: number;
   style?: React.CSSProperties;
   underline?: boolean;
-}> = ({text, delay = 0, size = 72, color = C.ink, stagger = 3, weight = 700, style, underline = true}) => {
+}> = ({text, delay: rawDelay = 0, size = 72, color = C.ink, stagger = 3, weight = 700, style, underline = true}) => {
   const frame = useCurrentFrame();
   const {fps} = useVideoConfig();
+  const delay = rawDelay * usePace();
   const parts = text.split(/(\*[^*]+\*)/).filter(Boolean);
   const words: {w: string; hl: boolean; first: boolean; tail: string}[] = [];
   parts.forEach((part) => {
@@ -236,6 +248,7 @@ export const Counter: React.FC<{value: string; delay: number; dur?: number; styl
   style,
 }) => {
   const frame = useCurrentFrame();
+  delay *= usePace();
   const m = value.match(/(\d[\d,]*\.?\d*)/);
   if (!m || m.index === undefined) return <span style={style}>{value}</span>;
   const raw = m[1];

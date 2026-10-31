@@ -1,94 +1,109 @@
 # YouTube upload kit: Thailand Creator Content Insight 2026
 
-## Title (pick one, all under 70 characters)
+Video: `out/th-creator-insight-2026.mp4` (1080p, 5:24)
+Captions: `out/th-creator-insight-2026.en.srt` (English)
 
-1. Thailand YouTube Trends 2026: What Thais Watch and Top Creators
-2. YouTube Creator Trends in Thailand 2026 | Content Insight
-3. Top Thai YouTube Creators & Content Trends 2026, Explained
+Target keywords: content insight, creator Thailand, YouTube creators, YouTube trend, creator trend, top creator, Thailand niche, plus Thai creator, Thai YouTubers, influencer marketing Thailand, creator economy.
 
-Recommendation: option 1. It leads with the highest-volume query ("Thailand YouTube trends") and still covers "top creators".
+## Title
+
+```
+Thailand YouTube Trends 2026: Top Creators, Niches & Content Insight
+```
+
+68 characters, so it shows in full on mobile and desktop. It puts the strongest search phrase first ("Thailand YouTube trends") and also covers "top creators", "niches" and "content insight".
+
+Backup titles for A/B testing in YouTube Studio:
+
+1. Top YouTube Creators in Thailand 2026: 6 Creator Trends to Watch
+2. YouTube Creator Trends Thailand 2026 | Content Insight for Brands
 
 ## Description
 
 ```
-What does Thailand actually watch on YouTube in 2026? This 3-minute content insight breaks down the six creator trends shaping Thai audiences, with the data, the top creators in each niche, the cultural moments to own, and where brands fit.
+Thailand YouTube trends 2026: a content insight on the 6 creator trends, top creators and fastest-growing niches shaping what Thai audiences watch, and how brands can join in.
 
-KEY TAKEAWAYS
+What does Thailand watch on YouTube? This 5-minute creator trend report covers the data, the top Thai YouTube creators in each niche, the cultural moments to own in 2026 and 2027, and where brands fit, from series and music to ghost stories, podcasts, food and travel, and gaming.
+
+KEY INSIGHTS
 • 40% of YouTube views in Thailand happen more than a month after upload, so creator content keeps working long after launch.
-• About 1,300 Thai channels have more than 1 million subscribers.
+• About 1,300 Thai YouTube channels have more than 1 million subscribers.
 • 90% of Thai users rate YouTube the most trustworthy video platform.
 • YouTube delivers 1.71x higher marketing ROI than traditional TV in Thailand (MMM meta-analysis, 23 Thai studies).
 • Thailand's three most-subscribed YouTube channels are TV networks: one31, Workpoint and Ch3.
 • 10 of the 10 top music videos in Thailand in 2025 were Thai, led by rap x luk thung.
 • Two of YouTube Thailand's top 10 creators of 2025 tell ghost stories.
 • 94% of Thai Gen Z say YouTube has the best podcast content.
+• Thailand's #2 trending search of 2025 was a domestic travel deal.
 • A single Thai gamer, zbing z. (22M subscribers), out-subscribes a national TV channel.
 
 CHAPTERS
 0:00 Thailand on YouTube: the big picture
-0:27 01 Series Nation: lakorn, BL series and variety
-0:53 02 Luk Thung x Rap: Thai music on YouTube
-1:18 03 Ghost Stories: horror creators and call-in shows
-1:44 04 Talk of the Town: podcasts and long-form talk
-2:10 05 Eat & Travel Thai: food and travel creators
-2:35 06 Game On: gaming creators and RoV esports
-3:01 Amplify: creator content plus brand ads
+0:28 01 Series Nation: lakorn, BL series and variety
+1:14 02 Luk Thung x Rap: Thai music on YouTube
+2:01 03 Ghost Stories: horror creators and call-in shows
+2:47 04 Talk of the Town: Thai podcasts and long-form talk
+3:34 05 Eat & Travel Thai: food and travel creators
+4:20 06 Game On: gaming creators and RoV esports
+5:07 Amplify: creator content plus brand ads
 
-TOP THAI YOUTUBE CREATORS FEATURED
-Series & TV: one31, WorkpointOfficial, Ch3Thailand, GMMTV, Ch7HD
-Music: GMM GRAMMY, Grammy Gold, RsiamMusic, welovekamikaze, FHERO
-Ghost stories: The Ghost Radio, Epic Time, Ajarn Yod, Lhon Diary
-Podcasts: GoodDayOfficial, 9arm, Mission To The Moon, FAROSE, CK Cheong
-Food & travel: BANKII, Jack Pap Ho, Mom Tanad Daek, Jamsai JS, Go Went Go
-Gaming: zbing z., RUOK, HEARTROCKER, PojzPlaza, Garena RoV Thailand
+THE 6 THAILAND CREATOR NICHES AND TOP CREATORS
+01 Series Nation: one31, WorkpointOfficial, Ch3Thailand, GMMTV OFFICIAL, Ch7HD, Thai Ch8, GMM25Thailand, ZENSE MORE, GDH
+02 Luk Thung x Rap: GMM GRAMMY OFFICIAL, GRAMMY GOLD OFFICIAL, RsiamMusic, Genierock, welovekamikaze, LLOUD Official, FHERO Official
+03 Ghost Stories: Epic Time, The Ghost Radio, Ajarn Yod, Lhon Diary, The Shock Radio, ATIME Do Dee
+04 Talk of the Town: GoodDayOfficial, 9arm, Mission To The Moon, FAROSE, CK Cheong, Katanyu Tonight, Salmon Podcast
+05 Eat & Travel Thai: BANKII, Jack Pap Ho, Mom Tanad Daek, JIMSURIYA V.2, Jamsai JS, Go Went Go
+06 Game On: zbing z., RUOK, HEARTROCKER, PojzPlaza, PRIMKUNG, LowGrade, Garena RoV Thailand
 
 WHO THIS IS FOR
-Marketers, brand managers, agencies and creator partnership teams planning YouTube and influencer campaigns in Thailand.
+Marketers, brand managers, agencies, creator partnership teams and YouTube creators who want to understand YouTube trends and creator trends in Thailand, find the top creators in each niche, and plan influencer marketing campaigns.
 
 SOURCES
-Google / YouTube Works Awards Thailand 2026; Google & Kantar (2026); Google Year in Search Thailand 2025; YouTube Thailand year-end lists 2025; Social Blade (Sep 2026); Analytic Edge MMM meta-analysis 2021 to 2025; Nation Thailand; Bangkok Post; Esports Charts; Thailand Game Show 2026. Creators shown for illustration.
+Google / YouTube Works Awards Thailand 2026; Google & Kantar (2026); Google Year in Search Thailand 2025; YouTube Thailand year-end lists 2025; Social Blade (Sep 2026); Analytic Edge MMM meta-analysis 2021 to 2025; Nation Thailand; Bangkok Post; Esports Charts; HypeAuditor; Thailand Game Show 2026. Creators shown for illustration. Subscriber counts as of September 2026.
 
-#YouTubeTrends #ThailandCreators #CreatorEconomy
-```
-
-## Tags (about 480 characters, paste as is)
-
-```
-thailand youtube trends 2026, youtube creator trends, top youtube creators thailand, thai youtubers, creator content insight, youtube trends 2026, creator economy thailand, influencer marketing thailand, thai content trends, youtube marketing thailand, BL series youtube, luk thung, thai ghost stories, thai podcast, thai food creators, thai gaming youtubers, RoV esports, creator partnerships, thai creator marketing
+#YouTubeTrends #ThailandCreators #ContentInsight #CreatorTrends #TopCreators #YouTubeCreators #ThaiYouTubers #CreatorEconomy #InfluencerMarketing #Thailand #YouTubeThailand #CreatorMarketing #ThaiCreators #ContentTrends #MarketingInsights
 ```
 
 ## Hashtags
 
-Only the first three show above the title, and they are already in the description: `#YouTubeTrends #ThailandCreators #CreatorEconomy`
+15 hashtags at the end of the description. That is the maximum: if a video has more than 15, YouTube ignores all of them. The first three (#YouTubeTrends #ThailandCreators #ContentInsight) show above the title.
 
-## Pinned comment (helps search and AI answers pick up a clean summary)
+## Tags (paste as is, under the 500-character limit)
 
 ```
-Quick summary: Thailand's six biggest YouTube passion points in 2026 are Series Nation, Luk Thung x Rap, Ghost Stories, Talk of the Town (podcasts), Eat & Travel Thai and Game On. Which Thai creator trend should we deep dive next?
+thailand youtube trends 2026, youtube trends 2026, creator trends 2026, content insight, top creators thailand, top youtube creators thailand, youtube creators thailand, thai youtubers, creator thailand, thailand niche, youtube niche ideas, influencer marketing thailand, creator economy thailand, thai content trends, BL series, luk thung, thai ghost stories, thai podcast, thai food creators, thai gaming youtubers, RoV esports
 ```
 
-## Upload settings
+## Pinned comment
 
-- Category: Science & Technology, or People & Blogs if you want a creator-community feel. For a B2B insight video, Education also works.
-- Language: English. Paste the Thai title and description below into the "Languages" tab (Thai) so the video ranks for Thai-language searches.
-- Captions: upload an English .srt. The video has on-screen text and no voice, so captions with the key stats are the strongest indexable signal for search and AI summaries.
-- Thumbnail: big red "TH 2026", headline "What Thailand Watches", plus 3 to 4 creator avatars. Keep it under 5 words.
-- Playlist: "Creator Content Insight 2026", ready for future market episodes.
+```
+Quick summary: Thailand's six biggest YouTube creator niches in 2026 are Series Nation, Luk Thung x Rap, Ghost Stories, Talk of the Town (podcasts), Eat & Travel Thai and Game On. Which Thai creator trend should we deep dive next?
+```
+
+## Upload checklist (YouTube Studio)
+
+1. Upload `th-creator-insight-2026.mp4`. Paste the title, description and tags above.
+2. Subtitles: Add language > English > Upload file > "With timing" > `th-creator-insight-2026.en.srt`.
+3. Languages tab: add Thai and paste the Thai title and description below.
+4. Category: Education (best fit for an insight report). Language of video: English.
+5. Thumbnail: big red "TH 2026", headline "What Thailand Watches", 3 to 4 creator avatars. Under 5 words.
+6. Playlist: "Creator Content Insight 2026".
+7. Add the pinned comment once the video is live.
 
 ## Thai version (Languages tab > Thai)
 
-Have a Thai-speaking teammate do a quick read before publishing. The wording is natural but should be checked by a native speaker.
+Have a Thai-speaking teammate do a quick read before publishing.
 
 Title:
 
 ```
-เทรนด์ YouTube ไทย 2026: คนไทยดูอะไร และครีเอเตอร์ท็อปของแต่ละสาย
+เทรนด์ YouTube ไทย 2026: ครีเอเตอร์ท็อป นิชมาแรง และคอนเทนต์อินไซต์
 ```
 
 Description:
 
 ```
-ปี 2026 คนไทยดูอะไรบน YouTube? สรุป 6 เทรนด์ครีเอเตอร์ที่กำลังมาแรงในประเทศไทย ภายใน 3 นาที พร้อมข้อมูล ครีเอเตอร์ท็อปในแต่ละสาย โมเมนต์สำคัญที่แบรนด์ควรจับ และโอกาสของแบรนด์
+เทรนด์ YouTube ไทย 2026: คอนเทนต์อินไซต์ 6 เทรนด์ครีเอเตอร์ ครีเอเตอร์ท็อป และนิชที่กำลังมาแรงในประเทศไทย พร้อมโอกาสของแบรนด์
 
 ประเด็นสำคัญ
 • 40% ของยอดวิวบน YouTube ในไทย เกิดขึ้นหลังอัปโหลดไปแล้วมากกว่า 1 เดือน
@@ -103,20 +118,20 @@ Description:
 
 สารบัญ
 0:00 ภาพรวมคนไทยบน YouTube
-0:27 01 ซีรีส์และละคร
-0:53 02 ลูกทุ่ง x แร็ป
-1:18 03 เรื่องผี
-1:44 04 พอดแคสต์และรายการทอล์ก
-2:10 05 กินเที่ยวไทย
-2:35 06 เกมและอีสปอร์ต
-3:01 ขยายผล: คอนเทนต์ครีเอเตอร์ควบคู่โฆษณาแบรนด์
+0:28 01 ซีรีส์และละคร
+1:14 02 ลูกทุ่ง x แร็ป
+2:01 03 เรื่องผี
+2:47 04 พอดแคสต์และรายการทอล์ก
+3:34 05 กินเที่ยวไทย
+4:20 06 เกมและอีสปอร์ต
+5:07 ขยายผล: คอนเทนต์ครีเอเตอร์ควบคู่โฆษณาแบรนด์
 
 แหล่งข้อมูล: Google / YouTube Works Awards Thailand 2026, Google & Kantar (2026), Google Year in Search Thailand 2025, Social Blade (ก.ย. 2026) และอื่น ๆ ครีเอเตอร์ในวิดีโอใช้เพื่อเป็นตัวอย่างเท่านั้น
 
-#เทรนด์YouTube #ครีเอเตอร์ไทย #YouTubeTrends
+#เทรนด์YouTube #ครีเอเตอร์ไทย #ยูทูบเบอร์ไทย
 ```
 
-Thai tags (add to the English tags if you have room, 500 character limit in total):
+Thai tags (the tag box has a 500-character limit in total, so swap these in for some English tags only if you want to target Thai searches more):
 
 ```
 เทรนด์ youtube ไทย, ยูทูบเบอร์ไทย, ครีเอเตอร์ไทย, ซีรีส์วาย, ลูกทุ่ง, เรื่องผี, พอดแคสต์ไทย, กินเที่ยว, เกมเมอร์ไทย

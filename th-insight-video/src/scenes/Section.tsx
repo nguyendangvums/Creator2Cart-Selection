@@ -21,6 +21,7 @@ import {
   Source,
   lerp,
   useIn,
+  usePace,
 } from '../ui';
 
 const clamp = {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'} as const;
@@ -211,6 +212,7 @@ export const FactScene: React.FC<P> = ({s}) => {
 /* ---------------- Proof ---------------- */
 const BarChart: React.FC<{s: Section}> = ({s}) => {
   const frame = useCurrentFrame();
+  const k = usePace();
   const rows = s.proof.chart!;
   const max = Math.max(...rows.map((r) => r.value));
   const fills = [C.red, '#FF2E57', '#FF5C7C', '#FF8BA2', '#FFA6B8'];
@@ -237,7 +239,8 @@ const BarChart: React.FC<{s: Section}> = ({s}) => {
       <div style={{marginTop: 26}}>
         {rows.map((r, i) => {
           const d = 24 + i * 7;
-          const g = interpolate(frame, [d, d + 22], [0, 1], {...clamp, easing: (t) => 1 - Math.pow(1 - t, 3)});
+          const dk = d * k;
+          const g = interpolate(frame, [dk, dk + 22], [0, 1], {...clamp, easing: (t) => 1 - Math.pow(1 - t, 3)});
           return (
             <div key={r.label} style={{display: 'flex', alignItems: 'center', height: 94}}>
               <div
@@ -260,7 +263,7 @@ const BarChart: React.FC<{s: Section}> = ({s}) => {
                 style={{
                   marginRight: 14,
                   boxShadow: '0 0 0 2px #EDEDED',
-                  transform: `scale(${interpolate(frame, [d - 4, d + 6], [0, 1], clamp)})`,
+                  transform: `scale(${interpolate(frame, [dk - 4, dk + 6], [0, 1], clamp)})`,
                 }}
               />
               <div
@@ -597,6 +600,7 @@ export const BrandScene: React.FC<P> = ({s}) => (
 /* ---------------- Creators ---------------- */
 export const CreatorsScene: React.FC<P> = ({s}) => {
   const frame = useCurrentFrame();
+  const k = usePace();
   const list = s.creators.list;
   return (
     <Page>
@@ -622,7 +626,7 @@ export const CreatorsScene: React.FC<P> = ({s}) => {
         {list.map((c, i) => {
           const d = 16 + i * 4;
           const subAt = 62 + i * 3;
-          const on = interpolate(frame, [subAt, subAt + 4], [0, 1], clamp);
+          const on = interpolate(frame, [subAt * k, subAt * k + 4], [0, 1], clamp);
           return (
             <Pop key={c.name} delay={d} style={{width: 312}}>
               <div
