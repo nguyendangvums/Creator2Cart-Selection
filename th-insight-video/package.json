@@ -1,0 +1,20 @@
+{
+  "name": "th-insight-video",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "studio": "remotion studio",
+    "render": "remotion render src/index.ts InsightVideo out/th-creator-insight-2026.mp4"
+  },
+  "dependencies": {
+    "@fontsource/google-sans": "^5.3.2",
+    "@fontsource/plus-jakarta-sans": "^5.3.0",
+    "@remotion/cli": "^4.0.539",
+    "@remotion/transitions": "^4.0.539",
+    "@types/react": "^19.3.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "remotion": "^4.0.539",
+    "typescript": "^7.0.2"
+  }
+}

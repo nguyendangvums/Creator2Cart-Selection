@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Render a still for each frame given: ./scripts/stills.sh 30 400 ...
+for f in "$@"; do npx remotion still src/index.ts InsightVideo out/stills/f$f.png --frame=$f --log=error; done
