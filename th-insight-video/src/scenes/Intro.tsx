@@ -3,6 +3,7 @@ import {interpolate, useCurrentFrame} from 'remotion';
 import {screens, sections, shining} from '../data';
 import {C, F} from '../theme';
 import {
+  ChannelTag,
   Counter,
   Dot,
   Floating,
@@ -83,11 +84,10 @@ export const TitleScene: React.FC = () => {
         ))}
       </div>
       {[0, 1, 2, 3, 4, 5].map((i) => (
-        <Sfx key={i} at={10 + i * 7} name={`note${i}`} vol={0.35} />
+        <Sfx key={i} at={10 + i * 7} name={`note${i}`} vol={0.3} />
       ))}
       <Sfx at={13} name="impact" vol={0.55} />
       <Sfx at={34} name="swoosh" vol={0.5} />
-      <Sfx at={36} name="impact" vol={0.4} />
     </Page>
   );
 };
@@ -162,10 +162,13 @@ const StatCards: React.FC<{
               >
                 {s.label}
               </div>
+              {s.avatar && s.channel ? (
+                <div style={{marginTop: 'auto'}}>
+                  <ChannelTag id={s.avatar} name={s.channel} dark={dark} size={56} />
+                </div>
+              ) : null}
             </div>
             <Sfx at={d} name="pop" vol={0.45} />
-            <Sfx at={d + 4} name="tick" vol={0.25} />
-            <Sfx at={d + 12} name="tick" vol={0.2} />
             <Sfx at={d + 30} name="ding" vol={0.3} />
           </Reveal>
         );

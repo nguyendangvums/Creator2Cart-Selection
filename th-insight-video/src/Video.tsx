@@ -79,7 +79,7 @@ export const InsightVideo: React.FC = () => {
         src={staticFile('music/harbor-notes.mp3')}
         startFrom={MUSIC_OFFSET}
         volume={(f) =>
-          0.34 *
+          0.5 *
           interpolate(f, [0, 30], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'}) *
           interpolate(f, [TOTAL - 90, TOTAL - 2], [1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})
         }

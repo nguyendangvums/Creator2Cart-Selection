@@ -1,7 +1,8 @@
 // Content distilled from "[TH] YouTube Creator Content Insight 2026".
 // Copy is trimmed for video: one idea per beat, short labels, no sales asks.
 
-export type Stat = {value: string; label: string};
+export type Stat = {value: string; label: string; avatar?: string; channel?: string};
+export type Face = {avatar: string; name: string};
 export type Item = {icon: string; title: string; desc?: string};
 export type Moment = {date: string; label: string};
 export type Creator = {name: string; subs: string};
@@ -14,11 +15,11 @@ export type Section = {
   desc: string;
   icon: string;
   cover: string;
-  fact: {stat: string; headline: string; soWhat: string; icon: string; source: string};
+  fact: {stat: string; headline: string; soWhat: string; icon: string; source: string; faces?: Face[]};
   proof: {
     headline: string;
     sub: string;
-    chart?: {label: string; value: number; display: string}[];
+    chart?: {label: string; value: number; display: string; avatar: string}[];
     stats: Stat[];
     source: string;
   };
@@ -42,20 +43,25 @@ export const sections: Section[] = [
       soWhat: 'Thai families made YouTube their TV guide.',
       icon: 'p06_044',
       source: 'Social Blade, Thailand channel ranks (Sep 2026)',
+      faces: [
+        {avatar: 's10_0', name: 'one31'},
+        {avatar: 's10_1', name: 'Workpoint'},
+        {avatar: 's10_2', name: 'Ch3Thailand'},
+      ],
     },
     proof: {
       headline: "Thai TV is YouTube's *biggest show*",
       sub: 'Subscribers, millions',
       chart: [
-        {label: 'one31', value: 45.1, display: '45.1M'},
-        {label: 'Workpoint', value: 44, display: '44M'},
-        {label: 'Ch3Thailand', value: 37, display: '37M'},
-        {label: 'GMMTV', value: 20.9, display: '20.9M'},
-        {label: 'Ch7HD', value: 19.7, display: '19.7M'},
+        {label: 'one31', value: 45.1, display: '45.1M', avatar: 's10_0'},
+        {label: 'Workpoint', value: 44, display: '44M', avatar: 's10_1'},
+        {label: 'Ch3Thailand', value: 37, display: '37M', avatar: 's10_2'},
+        {label: 'GMMTV', value: 20.9, display: '20.9M', avatar: 's10_3'},
+        {label: 'Ch7HD', value: 19.7, display: '19.7M', avatar: 's10_4'},
       ],
       stats: [
         {value: '฿4.9B+', label: 'BL & GL series industry, growing ~17% a year'},
-        {value: '44.7B', label: "lifetime views on Workpoint's channel"},
+        {value: '44.7B', label: 'lifetime views on the channel', avatar: 's10_1', channel: 'WorkpointOfficial'},
       ],
       source: 'Social Blade (Sep 2026); Nation Thailand (Jun 2026); The Geekiary (Nov 2025)',
     },
@@ -124,8 +130,8 @@ export const sections: Section[] = [
       sub: '',
       stats: [
         {value: '10 of 10', label: 'top music videos of 2025 were Thai'},
-        {value: '22.3M', label: 'subscribers for Grammy Gold, a luk thung label'},
-        {value: '27M+', label: 'views for "Bangkok City" by Kradaeng Arsayam'},
+        {value: '22.3M', label: 'subscribers for this luk thung label', avatar: 's18_1', channel: 'GRAMMY GOLD OFFICIAL'},
+        {value: '27M+', label: 'views for the hit "Bangkok City", spotlighted in 2026'},
       ],
       source: 'YouTube Thailand year-end lists (Dec 2025); Social Blade (Sep 2026); Google (Sep 2026)',
     },
@@ -188,14 +194,18 @@ export const sections: Section[] = [
       soWhat: 'Horror is mainstream prime time, with long late-night sessions.',
       icon: 'p22_240',
       source: 'YouTube Thailand year-end lists, top creators (Dec 2025)',
+      faces: [
+        {avatar: 's26_1', name: 'The Ghost Radio (#3)'},
+        {avatar: 's26_3', name: 'Lhon Diary (#9)'},
+      ],
     },
     proof: {
       headline: 'Thai horror fills *radios, cinemas and screens*',
       sub: '',
       stats: [
-        {value: '6.3B', label: 'lifetime views for The Ghost Radio'},
+        {value: '6.3B', label: 'lifetime views for this call-in ghost show', avatar: 's26_1', channel: 'The Ghost Radio'},
         {value: '฿465M', label: 'for Death Whisperer 3 at the box office'},
-        {value: '฿31.5M', label: 'opening week for a film born from a Ghost Radio story'},
+        {value: '฿31.5M', label: 'opening week for a film born from one of its stories', avatar: 's26_1', channel: 'The Ghost Radio'},
       ],
       source: 'Social Blade (Sep 2026); Death Whisperer 3 (Oct 2025); Thairath (Dec 2025)',
     },
@@ -262,11 +272,11 @@ export const sections: Section[] = [
       headline: 'Thailand watches *long conversations*',
       sub: 'Subscribers, millions',
       chart: [
-        {label: 'GoodDayOfficial', value: 3.95, display: '3.95M'},
-        {label: '9arm', value: 1.61, display: '1.61M'},
-        {label: 'Mission To The Moon', value: 1.38, display: '1.38M'},
-        {label: 'FAROSE', value: 0.996, display: '996K'},
-        {label: 'CK Cheong', value: 0.775, display: '775K'},
+        {label: 'GoodDayOfficial', value: 3.95, display: '3.95M', avatar: 's34_0'},
+        {label: '9arm', value: 1.61, display: '1.61M', avatar: 's34_1'},
+        {label: 'Mission To The Moon', value: 1.38, display: '1.38M', avatar: 's34_2'},
+        {label: 'FAROSE', value: 0.996, display: '996K', avatar: 's34_3'},
+        {label: 'CK Cheong', value: 0.775, display: '775K', avatar: 's34_4'},
       ],
       stats: [
         {value: '+50%', label: 'year-on-year growth in podcast viewing'},
@@ -338,14 +348,14 @@ export const sections: Section[] = [
       headline: 'Thailand *eats and travels* on YouTube',
       sub: 'Subscribers, millions',
       chart: [
-        {label: 'BANKII', value: 10.6, display: '10.6M'},
-        {label: 'Jack Pap Ho', value: 9, display: '9M'},
-        {label: 'Mom Tanad Daek', value: 4.96, display: '4.96M'},
-        {label: 'JIMSURIYA V.2', value: 3.24, display: '3.24M'},
-        {label: 'Jamsai JS', value: 2.01, display: '2.01M'},
+        {label: 'BANKII', value: 10.6, display: '10.6M', avatar: 's42_0'},
+        {label: 'Jack Pap Ho', value: 9, display: '9M', avatar: 's42_1'},
+        {label: 'Mom Tanad Daek', value: 4.96, display: '4.96M', avatar: 's42_2'},
+        {label: 'JIMSURIYA V.2', value: 3.24, display: '3.24M', avatar: 's42_3'},
+        {label: 'Jamsai JS', value: 2.01, display: '2.01M', avatar: 's42_4'},
       ],
       stats: [
-        {value: '75%', label: "of Go Went Go's views come from the TV screen"},
+        {value: '75%', label: 'of views for this travel creator come from the TV', avatar: 's42_5', channel: 'Go Went Go'},
         {value: '1M', label: 'domestic travel vouchers, from November 2026'},
       ],
       source: 'Social Blade (Sep 2026); Google (Sep 2026); Thansettakij (Sep 2026)',
@@ -408,13 +418,17 @@ export const sections: Section[] = [
       soWhat: 'Gaming creators are TV channels in their own right.',
       icon: 'p46_522',
       source: 'Social Blade (Sep 2026); YouTube Thailand top creators (Dec 2025)',
+      faces: [
+        {avatar: 's50_0', name: 'zbing z. 22M'},
+        {avatar: 's10_4', name: 'Ch7HD 19.7M'},
+      ],
     },
     proof: {
       headline: 'Thailand plays together, *on the big screen*',
       sub: '',
       stats: [
         {value: '7 of 50', label: 'most-subscribed Thai channels are gaming'},
-        {value: '122K', label: 'peak viewers, RoV Pro League 2026 Summer'},
+        {value: '122K', label: 'peak viewers, RoV Pro League 2026 Summer', avatar: 's50_7', channel: 'Garena RoV Thailand'},
         {value: '4 days', label: 'of Thailand Game Show in Bangkok'},
       ],
       source: 'HypeAuditor (Sep 2026); Esports Charts (2026); Thailand Game Show (2026)',
@@ -473,8 +487,8 @@ export const shining: (Stat & {kicker: string; icon: string})[] = [
 ];
 
 export const screens: (Stat & {kicker: string; icon: string})[] = [
-  {kicker: 'Connected TV', icon: 'p03_020', value: '75%', label: "of Go Went Go's views come from the TV"},
+  {kicker: 'Connected TV', icon: 'p03_020', value: '75%', label: 'of views for a top travel creator come from the TV', avatar: 's42_5', channel: 'Go Went Go'},
   {kicker: 'Podcasts', icon: 'p03_022', value: '+50%', label: 'year-on-year growth in podcast viewing'},
   {kicker: 'Shorts', icon: 'p03_024', value: '+85%', label: 'year-on-year growth in Shorts uploads'},
-  {kicker: 'Live', icon: 'p03_026', value: '122K', label: 'peak live viewers for RoV Pro League'},
+  {kicker: 'Live', icon: 'p03_026', value: '122K', label: 'peak live viewers for RoV Pro League', avatar: 's50_7', channel: 'Garena RoV Thailand'},
 ];

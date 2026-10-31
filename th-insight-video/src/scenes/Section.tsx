@@ -3,6 +3,8 @@ import {Img, interpolate, staticFile, useCurrentFrame} from 'remotion';
 import {Section} from '../data';
 import {C, F} from '../theme';
 import {
+  Avatar,
+  ChannelTag,
   Counter,
   Dot,
   Floating,
@@ -116,6 +118,16 @@ export const FactScene: React.FC<P> = ({s}) => {
           <Counter value={s.fact.stat} delay={10} dur={26} />
         </div>
         <Headline text={s.fact.headline} size={54} delay={30} stagger={2} style={{marginTop: 18}} />
+        {s.fact.faces ? (
+          <div style={{display: 'flex', gap: 40, marginTop: 30}}>
+            {s.fact.faces.map((f, i) => (
+              <Pop key={f.name} delay={58 + i * 7}>
+                <ChannelTag id={f.avatar} name={f.name} size={72} />
+                <Sfx at={58 + i * 7} name="pop" vol={0.3} />
+              </Pop>
+            ))}
+          </div>
+        ) : null}
       </div>
       <Reveal delay={84} y={50} style={{position: 'absolute', left: 120, top: 790, width: 1000}}>
         <div
@@ -190,10 +202,8 @@ export const FactScene: React.FC<P> = ({s}) => {
       <Source text={s.fact.source} delay={60} />
       <Sfx at={0} name="whoosh" vol={0.5} />
       <Sfx at={10} name="impact" vol={0.65} />
-      <Sfx at={36} name="ding" vol={0.3} />
       <Sfx at={28} name="sparkle" vol={0.45} />
       <Sfx at={84} name="swoosh" vol={0.45} />
-      <Sfx at={88} name="pop" vol={0.4} />
     </Page>
   );
 };
@@ -232,9 +242,9 @@ const BarChart: React.FC<{s: Section}> = ({s}) => {
             <div key={r.label} style={{display: 'flex', alignItems: 'center', height: 94}}>
               <div
                 style={{
-                  width: 310,
+                  width: 290,
                   textAlign: 'right',
-                  paddingRight: 24,
+                  paddingRight: 16,
                   fontFamily: F.body,
                   fontWeight: i === 0 ? 700 : 500,
                   fontSize: 29,
@@ -243,10 +253,20 @@ const BarChart: React.FC<{s: Section}> = ({s}) => {
               >
                 {r.label}
               </div>
+              <Avatar
+                id={r.avatar}
+                size={58}
+                ring={C.white}
+                style={{
+                  marginRight: 14,
+                  boxShadow: '0 0 0 2px #EDEDED',
+                  transform: `scale(${interpolate(frame, [d - 4, d + 6], [0, 1], clamp)})`,
+                }}
+              />
               <div
                 style={{
                   height: 52,
-                  width: (r.value / max) * 470 * g,
+                  width: (r.value / max) * 430 * g,
                   borderRadius: 8,
                   background: fills[i],
                 }}
@@ -263,7 +283,6 @@ const BarChart: React.FC<{s: Section}> = ({s}) => {
               >
                 {r.display}
               </div>
-              <Sfx at={d} name="tick" vol={0.25} />
             </div>
           );
         })}
@@ -297,19 +316,35 @@ export const ProofScene: React.FC<P> = ({s}) => {
                     boxSizing: 'border-box',
                   }}
                 >
+                  <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
+                    <div
+                      style={{
+                        fontFamily: F.head,
+                        fontWeight: 800,
+                        fontSize: st.avatar ? 84 : 92,
+                        lineHeight: 1,
+                        color: i === 0 ? C.red : C.ink,
+                        letterSpacing: -2,
+                      }}
+                    >
+                      <Counter value={st.value} delay={d} dur={24} />
+                    </div>
+                    {st.avatar ? <Avatar id={st.avatar} size={86} /> : null}
+                  </div>
+                  {st.channel ? (
+                    <div style={{marginTop: 16, fontFamily: F.body, fontWeight: 700, fontSize: 26, color: C.ink}}>
+                      {st.channel}
+                    </div>
+                  ) : null}
                   <div
                     style={{
-                      fontFamily: F.head,
-                      fontWeight: 800,
-                      fontSize: 92,
-                      lineHeight: 1,
-                      color: i === 0 ? C.red : C.ink,
-                      letterSpacing: -2,
+                      marginTop: st.channel ? 4 : 22,
+                      fontFamily: F.body,
+                      fontSize: st.channel ? 27 : 30,
+                      lineHeight: 1.3,
+                      color: C.body,
                     }}
                   >
-                    <Counter value={st.value} delay={d} dur={24} />
-                  </div>
-                  <div style={{marginTop: 22, fontFamily: F.body, fontSize: 30, lineHeight: 1.3, color: C.body}}>
                     {st.label}
                   </div>
                 </div>
@@ -339,6 +374,11 @@ export const ProofScene: React.FC<P> = ({s}) => {
                     justifyContent: 'flex-end',
                   }}
                 >
+                  {st.avatar && st.channel ? (
+                    <div style={{marginBottom: 'auto'}}>
+                      <ChannelTag id={st.avatar} name={st.channel} dark={i === 2} size={64} />
+                    </div>
+                  ) : null}
                   <div
                     style={{
                       fontFamily: F.head,
@@ -645,8 +685,7 @@ export const CreatorsScene: React.FC<P> = ({s}) => {
                   {on > 0.5 ? 'Subscribed' : 'Subscribe'}
                 </div>
               </div>
-              <Sfx at={d} name="tick" vol={0.22} />
-              <Sfx at={subAt} name="click" vol={0.3} />
+              {i % 2 === 0 ? <Sfx at={subAt} name="click" vol={0.25} /> : null}
             </Pop>
           );
         })}

@@ -14,9 +14,12 @@ export const useIn = (delay: number, damping = 200, durationInFrames?: number) =
 export const lerp = (p: number, a: number, b: number) => a + (b - a) * p;
 
 /** Sound effect at a scene-local frame. */
+// Master level for every sound effect, kept well under the music bed.
+export const SFX_GAIN = 0.5;
+
 export const Sfx: React.FC<{at: number; name: string; vol?: number}> = ({at, name, vol = 0.6}) => (
   <Sequence from={Math.max(0, Math.round(at))} durationInFrames={90} layout="none">
-    <Audio src={staticFile(`sfx/${name}.wav`)} volume={vol} />
+    <Audio src={staticFile(`sfx/${name}.wav`)} volume={vol * SFX_GAIN} />
   </Sequence>
 );
 
@@ -363,4 +366,49 @@ export const SectionPills: React.FC<{num: string; name: string; tag?: string}> =
 
 export const Page: React.FC<{children: React.ReactNode; bg?: string}> = ({children, bg = C.white}) => (
   <div style={{position: 'absolute', inset: 0, background: bg, overflow: 'hidden'}}>{children}</div>
+);
+
+export const Avatar: React.FC<{id: string; size: number; ring?: string; style?: React.CSSProperties}> = ({
+  id,
+  size,
+  ring = C.white,
+  style,
+}) => (
+  <Img
+    src={staticFile(`avatars/${id}.png`)}
+    style={{
+      width: size,
+      height: size,
+      borderRadius: '50%',
+      border: `${Math.max(3, size * 0.05)}px solid ${ring}`,
+      background: C.white,
+      objectFit: 'cover',
+      flexShrink: 0,
+      boxSizing: 'border-box',
+      ...style,
+    }}
+  />
+);
+
+/** Avatar plus channel name, used wherever a stat is about one channel. */
+export const ChannelTag: React.FC<{id: string; name: string; dark?: boolean; size?: number}> = ({
+  id,
+  name,
+  dark,
+  size = 60,
+}) => (
+  <div style={{display: 'flex', alignItems: 'center', gap: 14}}>
+    <Avatar id={id} size={size} ring={dark ? '#2A2A2A' : C.white} />
+    <div
+      style={{
+        fontFamily: F.body,
+        fontWeight: 700,
+        fontSize: 24,
+        color: dark ? C.white : C.ink,
+        whiteSpace: 'nowrap',
+      }}
+    >
+      {name}
+    </div>
+  </div>
 );

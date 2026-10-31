@@ -154,9 +154,7 @@ export const AmplifyScene: React.FC = () => (
     </div>
     <Sfx at={0} name="whoosh" vol={0.5} />
     <Sfx at={40} name="pop" vol={0.4} />
-    <Sfx at={58} name="tick" vol={0.3} />
     <Sfx at={70} name="pop" vol={0.4} />
-    <Sfx at={92} name="tick" vol={0.3} />
     <Sfx at={104} name="impact" vol={0.55} />
     <Sfx at={106} name="ding" vol={0.32} />
   </Page>
