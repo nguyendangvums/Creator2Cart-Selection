@@ -1,6 +1,6 @@
 # TH Creator Content Insight 2026: explainer video
 
-A 3:18 motion explainer built from the deck "[TH] YouTube Creator Content Insight 2026".
+A 5:24 motion explainer built from the deck "[TH] YouTube Creator Content Insight 2026".
 Built with Remotion (React), keeping the deck's fonts (Plus Jakarta Sans, Google Sans),
 YouTube red palette, icons and illustrations.
 
@@ -14,7 +14,7 @@ YouTube red palette, icons and illustrations.
 
 ## Audio
 
-- Music: "Sketch 06, Harbor Notes (Bossa Nova)", offset so the track's natural ending lands on the last frame
+- Music: "Sketch 06, Harbor Notes (Bossa Nova)". It plays once, then crossfades (equal power) into a second pass at a beat- and chroma-matched point (song 32.16 s at video 157.49 s), so the natural ending lands on the last frame. If the timeline length changes, recompute the join in `src/Video.tsx`.
 - Sound effects are synthesised by `scripts/make_sfx.py` (whoosh, pop, tick, ding, impact,
   riser, sparkle, marimba notes, chord), no third-party samples
 
@@ -29,3 +29,9 @@ node scripts/stills.mjs 150 900          # spot-check frames as PNG
 ```
 
 Content lives in `src/data.ts`; layout and motion in `src/scenes/*`; shared animation primitives in `src/ui.tsx`.
+
+## Captions
+
+```bash
+node scripts/build-captions.mjs   # writes out/th-creator-insight-2026.en.srt from src/timeline.ts + src/data.ts
+```

@@ -95,7 +95,7 @@ export const InsightVideo: React.FC = () => {
           Join point found by onset and chroma correlation (scripts notes in README). */}
       <Audio
         src={staticFile('music/harbor-notes.mp3')}
-        volume={(f) => MUSIC_VOL * clampI(f, [0, 30], [0, 1]) * clampI(f, [JOIN - XF, JOIN + XF], [1, 0])}
+        volume={(f) => MUSIC_VOL * clampI(f, [0, 30], [0, 1]) * Math.cos((clampI(f, [JOIN - XF, JOIN + XF], [0, 1]) * Math.PI) / 2)}
       />
       <Sequence from={JOIN - XF} layout="none">
         <Audio
@@ -103,7 +103,7 @@ export const InsightVideo: React.FC = () => {
           startFrom={SECOND_PASS_FROM - XF}
           volume={(f) =>
             MUSIC_VOL *
-            clampI(f, [0, 2 * XF], [0, 1]) *
+            Math.sin((clampI(f, [0, 2 * XF], [0, 1]) * Math.PI) / 2) * // equal-power crossfade
             clampI(f + JOIN - XF, [TOTAL - 75, TOTAL - 2], [1, 0])
           }
         />
